@@ -65,6 +65,36 @@ a+b=b+a
 
 ## [76](https://leetcode.cn/problems/minimum-ascent-path/) 最小路径和
 
-right可行解，left局部最优解，重复前两步直到结尾
+right可行解，left局部最优解
 
 参考：https://labuladong.github.io/article/fname.html?fname=滑动窗口技巧进阶
+
+## [567](https://leetcode.cn/problems/permutation-in-string/) 字符串的排列
+
+True: 长度和valid
+
+参考：https://labuladong.github.io/article/fname.html?fname=滑动窗口技巧进阶
+
+## [3](https://leetcode.cn/problems/longest-substring-without-repeating-characters/) 最长无重复字符的子串
+
+不需要need的滑动窗口
+
+参考：https://labuladong.github.io/article/fname.html?fname=滑动窗口技巧进阶
+
+## [206](https://leetcode.cn/problems/reverse-linked-list/) 链表反转
+
+last = self.reverseList(head.next)
+
+参考：https://labuladong.github.io/article/fname.html?fname=递归反转链表的一部分
+
+## [92](https://leetcode.cn/problems/reverse-linked-list-ii/) 链表反转 II
+
+successor相当与链表全反最后的null，调到开始处，反转前k个
+
+参考：https://labuladong.github.io/article/fname.html?fname=递归反转链表的一部分
+
+## [25](https://leetcode.cn/problems/reverse-nodes-in-k-group/) 反转链表中的每个组
+
+不停地反转前k个
+
+参考：https://labuladong.github.io/article/fname.html?fname=k个一组反转链表

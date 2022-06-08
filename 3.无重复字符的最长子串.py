@@ -5,7 +5,23 @@
 #
 
 # @lc code=start
+from collections import defaultdict
+
+
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        left,right=0,0
+        window = defaultdict(int)
+        right, left = 0, 0
+        maxres = 0
+        while right < len(s):
+            c = s[right]
+            right += 1
+            window[c] += 1
+            while window[c] >= 2:
+                d = s[left]
+                left += 1
+                window[d] -= 1
+            maxres = max(maxres, right-left)
+        return maxres
+
 # @lc code=end

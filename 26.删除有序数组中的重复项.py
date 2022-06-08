@@ -7,12 +7,15 @@
 # @lc code=start
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        slow, fast = 0, 1
-        while fast < len(nums):
-            if nums[slow] != nums[fast]:
+        lennums = len(nums)
+        if lennums == 0:
+            return 0
+        fast, slow = 0, 0
+        while fast < lennums:
+            if nums[fast] != nums[slow]:
                 slow += 1
                 nums[slow] = nums[fast]
             fast += 1
-        return slow + 1
+        # 第一个不用slow赋值，返回时需考虑
+        return slow+1
 # @lc code=end
-
