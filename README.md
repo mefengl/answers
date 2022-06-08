@@ -16,3 +16,55 @@
 区间的裁剪
 
 参考：https://labuladong.github.io/article/fname.html?fname=二分查找详解
+
+## [77](https://leetcode.cn/problems/combinations/) 组合
+
+k个元素的组合是子集树的k层节点
+
+> len(val)决定层数，而不是num(idx+1)，那只是选择
+
+参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
+
+## [90](https://leetcode.cn/problems/subsets-ii/) 子集 II
+
+值相同的相邻树枝会产生重复
+
+> 排序，num[i-1] != num[i]
+
+参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
+
+## [47](https://leetcode.cn/problems/permutations-ii/) 排列 II
+
+左相邻元素没有用过就跳过
+
+> 相同元素相对位置固定，2 -> 2' -> 2''
+
+参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
+
+## [21](https://leetcode.cn/problems/merge-two-sorted-lists/) 合并两个有序链表
+
+把较小的节点接到结果链表上
+
+参考：https://labuladong.github.io/article/fname.html?fname=链表技巧
+
+## [19](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/) 删除链表的倒数第N个节点
+
+双指针构成一条定长绳
+
+参考：https://labuladong.github.io/article/fname.html?fname=链表技巧
+
+## [876](https://leetcode.cn/problems/middle-of-the-linked-list/) 中间值
+
+一步两步
+
+参考：https://labuladong.github.io/article/fname.html?fname=链表技巧
+
+## [160](https://leetcode.cn/problems/intersection-of-two-linked-lists/) 两个链表的第一个公共节点
+
+a+b=b+a
+
+## [76](https://leetcode.cn/problems/minimum-ascent-path/) 最小路径和
+
+right可行解，left局部最优解，重复前两步直到结尾
+
+参考：https://labuladong.github.io/article/fname.html?fname=滑动窗口技巧进阶
