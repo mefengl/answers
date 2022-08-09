@@ -98,3 +98,33 @@ successor相当与链表全反最后的null，调到开始处，反转前k个
 不停地反转前k个
 
 参考：https://labuladong.github.io/article/fname.html?fname=k个一组反转链表
+
+## [1109](https://leetcode.cn/problems/corporate-flight-bookings/) 公司飞机票
+
+[a,b] -> [a,b-a] -> [a,(b-a)+a]
+
+[a,b] -> [a+3,b-a] -> [a+3,(b-a)+(a+3)]
+
+> 从而完成加一个元素就提供了加一串数组的方法
+
+参考：https://labuladong.github.io/article/fname.html?fname=差分技巧
+
+## [1094](https://leetcode.cn/problems/car-pooling/) 公司可用车辆
+
+同拆分数组，但先下后上
+
+参考：https://labuladong.github.io/article/fname.html?fname=差分技巧
+
+## [48](https://leetcode.cn/problems/rotate-image/) 旋转图像
+
+先后沿斜和竖对称翻转
+
+参考：https://labuladong.github.io/article/fname.html?fname=花式遍历
+
+## [54](https://leetcode.cn/problems/spiral-matrix/) 螺旋矩阵
+
+四指针
+
+> 每次遍历前的if也太不优雅了，但一时间内没有想到更好的解法
+
+参考：https://labuladong.github.io/article/fname.html?fname=花式遍历
