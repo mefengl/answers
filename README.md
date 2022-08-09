@@ -128,3 +128,9 @@ successor相当与链表全反最后的null，调到开始处，反转前k个
 > 每次遍历前的if也太不优雅了，但一时间内没有想到更好的解法
 
 参考：https://labuladong.github.io/article/fname.html?fname=花式遍历
+
+## [99](https://leetcode.cn/problems/recover-binary-search-tree/) 恢复二叉搜索树
+
+中序遍历得到仅一对错误的有序数组，通过双指针恢复
+
+参考：插件内labuladong思路
