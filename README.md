@@ -140,3 +140,9 @@ successor相当与链表全反最后的null，调到开始处，反转前k个
 和二叉树宽度类似，但需要将小于0的路径置为0
 
 参考：插件内labuladong思路
+
+## [226](https://leetcode.cn/problems/invert-binary-tree/) 翻转二叉树
+
+left,right=right,left
+
+参考：二叉树递归基本操作
