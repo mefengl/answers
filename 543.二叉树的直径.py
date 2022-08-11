@@ -13,16 +13,33 @@
 #         self.right = right
 class Solution:
 
+    # 语义清晰版
+    maxD = 0
+    def maxDepth(self,root):
+        if root is None:
+            return 0
+        return max(self.maxDepth(root.left)+1,self.maxDepth(root.right)+1)
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        self.maxDiameter = 0
-        def maxDepth(root: Optional[TreeNode]) -> int:
+        def maxDiameter(root):
             if root is None:
-                return 0
-            left = maxDepth(root.left)
-            right = maxDepth(root.right)
-            self.maxDiameter = max(self.maxDiameter, left + right)
-            return max(left,right) + 1
-        maxDepth(root)
-        return self.maxDiameter
+                return
+            left = self.maxDepth(root.left)
+            right = self.maxDepth(root.right)
+            if left+right>self.maxD:
+                self.maxD = left+right
+            maxDiameter(root.left)
+            maxDiameter(root.right)
+        maxDiameter(root)
+        return self.maxD
+        # self.maxDiameter = 0
+        # def maxDepth(root: Optional[TreeNode]) -> int:
+        #     if root is None:
+        #         return 0
+        #     left = maxDepth(root.left)
+        #     right = maxDepth(root.right)
+        #     self.maxDiameter = max(self.maxDiameter, left + right)
+        #     return max(left,right) + 1
+        # maxDepth(root)
+        # return self.maxDiameter
 
 # @lc code=end
