@@ -146,3 +146,9 @@ successor相当与链表全反最后的null，调到开始处，反转前k个
 left,right=right,left
 
 参考：二叉树递归基本操作
+
+## [116](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/) 填充每个节点的下一个右侧节点指针
+
+层遍历
+
+参考：官方题解 方法一：层次遍历
