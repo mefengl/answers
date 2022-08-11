@@ -134,3 +134,9 @@ successor相当与链表全反最后的null，调到开始处，反转前k个
 中序遍历得到仅一对错误的有序数组，通过双指针恢复
 
 参考：插件内labuladong思路
+
+## [124](https://leetcode.cn/problems/binary-tree-maximum-path-sum/) 二叉树的最大路径和
+
+和二叉树宽度类似，但需要将小于0的路径置为0
+
+参考：插件内labuladong思路
