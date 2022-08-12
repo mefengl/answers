@@ -170,3 +170,9 @@ left,right=right,left
 前序遍历的第一个元素是根节点，根节点+中序遍历可以得到左右子树长度，再代入前序遍历
 
 参考：https://labuladong.github.io/article/fname.html?fname=二叉树系列2
+
+## [106](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/) 根据中序和后序遍历构造二叉树
+
+和105一样，小窍门是：inorder和postorder的长度永远是相同的，可以按照它推断索引范围
+
+参考：各序遍历规律
