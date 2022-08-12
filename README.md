@@ -176,3 +176,9 @@ left,right=right,left
 和105一样，小窍门是：inorder和postorder的长度永远是相同的，可以按照它推断索引范围
 
 参考：各序遍历规律
+
+## [889](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/) 根据前序和后序遍历构造二叉树
+
+之所以需要中序遍历，是为了确认前序遍历里的第二个元素是左节点还是右节点（当左数长度为0时是右节点），此题两种情况都可以
+
+参考：https://labuladong.github.io/article/fname.html?fname=二叉树系列2
