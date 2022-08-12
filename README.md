@@ -145,10 +145,28 @@ successor相当与链表全反最后的null，调到开始处，反转前k个
 
 left,right=right,left
 
-参考：二叉树递归基本操作
+参考：二叉树递归基本操作：不可中序遍历
 
 ## [116](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/) 填充每个节点的下一个右侧节点指针
 
 层遍历
 
 参考：官方题解 方法一：层次遍历
+
+## [114](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/) 将二叉树展开为链表
+
+后序遍历，但按照 前序遍历的链表顺序 合并
+
+参考：https://labuladong.github.io/article/fname.html?fname=二叉树系列1
+
+## [654](https://leetcode.cn/problems/maximum-binary-tree/) 最大二叉树
+
+递归
+
+参考：二叉树递归构建基本操作：root(val),root.left=left(),root.right=right()
+
+## [105](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) 根据前序和中序遍历构造二叉树
+
+前序遍历的第一个元素是根节点，根节点+中序遍历可以得到左右子树长度，再代入前序遍历
+
+参考：https://labuladong.github.io/article/fname.html?fname=二叉树系列2
