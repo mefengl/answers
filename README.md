@@ -188,3 +188,9 @@ left,right=right,left
 前序后序均可，因为可用特殊符号表示空节点，后序解析时先右树后左树
 
 参考：https://labuladong.github.io/article/fname.html?fname=二叉树的序列化
+
+## [652](https://leetcode.cn/problems/find-duplicate-subtrees/) 检测重复的子树
+
+核心是297序列化二叉树，此外就是判断是否已出现且仅出现一次
+
+参考：https://labuladong.github.io/article/fname.html?fname=二叉树系列3
