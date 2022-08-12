@@ -182,3 +182,9 @@ left,right=right,left
 之所以需要中序遍历，是为了确认前序遍历里的第二个元素是左节点还是右节点（当左数长度为0时是右节点），此题两种情况都可以
 
 参考：https://labuladong.github.io/article/fname.html?fname=二叉树系列2
+
+## [297](https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/) 序列化二叉树
+
+前序后序均可，因为可用特殊符号表示空节点，后序解析时先右树后左树
+
+参考：https://labuladong.github.io/article/fname.html?fname=二叉树的序列化
