@@ -194,3 +194,9 @@ left,right=right,left
 核心是297序列化二叉树，此外就是判断是否已出现且仅出现一次
 
 参考：https://labuladong.github.io/article/fname.html?fname=二叉树系列3
+
+## [912](https://leetcode.cn/problems/sort-an-array/) 排序数组
+
+*在后序归并前面已经排好序的数组
+
+参考：https://labuladong.github.io/article/fname.html?fname=归并排序
