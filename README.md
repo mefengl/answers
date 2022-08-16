@@ -206,3 +206,9 @@ left,right=right,left
 在每次归并中，前指针和mid之间的元素便是「右侧小于当前元素的个数」
 
 参考：https://labuladong.github.io/article/fname.html?fname=归并排序
+
+## [493](https://leetcode.cn/problems/reverse-pairs/) 翻转对
+
+*比力扣315需要的技巧还少些，利用merge的同子树只比较一次和合并的两个数组各自是有序的两个特性去做
+
+参考：https://labuladong.github.io/article/fname.html?fname=归并排序
