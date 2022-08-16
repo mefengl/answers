@@ -200,3 +200,9 @@ left,right=right,left
 *在后序归并前面已经排好序的数组
 
 参考：https://labuladong.github.io/article/fname.html?fname=归并排序
+
+## [315](https://leetcode.cn/problems/count-of-smaller-numbers-after-self/) 计算右侧小于当前元素的个数
+
+在每次归并中，前指针和mid之间的元素便是「右侧小于当前元素的个数」
+
+参考：https://labuladong.github.io/article/fname.html?fname=归并排序
