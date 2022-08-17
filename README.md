@@ -250,3 +250,7 @@ left,right=right,left
 ## [450 删除二叉搜索树节点](https://leetcode.cn/problems/delete-node-in-a-bst/) 
 
 二分搜索，找到那个节点，分情况删除，其中左右子节点均有的情况为算法核心，需要取左子树最大或右子树最小（矮子里挑将军是为中庸），然后删除最大值或者最小值节点（妙处在于可以调用正在写的函数）
+
+## [96 不同的二叉搜索树](https://leetcode.cn/problems/unique-binary-search-trees/)
+
+左和右子树的组合数乘积就是根节点的组合数
