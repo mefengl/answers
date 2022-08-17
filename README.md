@@ -197,9 +197,15 @@ left,right=right,left
 
 ## [912 排序数组](https://leetcode.cn/problems/sort-an-array/) 
 
+### 归并排序
 *在后序归并前面已经排好序的数组
 
 参考：https://labuladong.github.io/article/fname.html?fname=归并排序
+
+### 快速排序
+在前序将每个元素放在正确的序号位置上
+
+参考：https://labuladong.github.io/article/fname.html?fname=快速排序
 
 ## [315 计算右侧小于当前元素的个数](https://leetcode.cn/problems/count-of-smaller-numbers-after-self/) 
 
