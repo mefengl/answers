@@ -234,3 +234,7 @@ left,right=right,left
 同力扣538，二叉搜索树 中序遍历 先右后左 降序进行，维持累加变量并赋值即可
 
 > 二叉搜索树的中序遍历问题往往是有序数组问题
+
+## [98](https://leetcode.cn/problems/validate-binary-search-tree/) 验证二叉搜索树
+
+通过参数，将root的约束传递到子孙节点
