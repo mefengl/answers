@@ -282,3 +282,9 @@ left,right=right,left
 *左和右子树的组合笛卡尔乘积就是根节点的所有组合
 
 参考：https://labuladong.github.io/article/fname.html?fname=BST3
+
+##[215 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/)
+
+快速排序的partition函数，在这里可以起到二分查找里结果函数的作用（ 类似nums[mid]，这里是partition(nums,lo,hi) ）
+
+> 数组可以获得长度，所以第K大可以转化成别的东西
