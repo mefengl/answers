@@ -218,3 +218,7 @@ left,right=right,left
 前缀和用来快速计算区间和，利用归并排序merge中数组有序可以得到范围解（因为右子树有序，根据前缀和的计算方式，在减数不变的情况下，对应的区间和也是有序的，通过start排除，通过end收纳，则从start到end都是解，这样end-start便为解的个数）
 
 参考：https://labuladong.github.io/article/fname.html?fname=归并排序
+
+## [230](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/) 求二叉搜索树的第k小元素
+
+二叉搜索树 中序遍历 按序进行
