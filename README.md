@@ -238,3 +238,7 @@ left,right=right,left
 ## [98](https://leetcode.cn/problems/validate-binary-search-tree/) 验证二叉搜索树
 
 通过参数，将root的约束传递到子孙节点
+
+## [700](https://leetcode.cn/problems/search-in-a-binary-search-tree/) 搜索二叉搜索树
+
+二分搜索
