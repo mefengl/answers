@@ -242,3 +242,7 @@ left,right=right,left
 ## [700](https://leetcode.cn/problems/search-in-a-binary-search-tree/) 搜索二叉搜索树
 
 二分搜索
+
+## [701](https://leetcode.cn/problems/insert-into-a-binary-search-tree/) 插入二叉搜索树
+
+二分搜索，找到那个空节点，插入
