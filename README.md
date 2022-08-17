@@ -221,4 +221,16 @@ left,right=right,left
 
 ## [230](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/) 求二叉搜索树的第k小元素
 
-二叉搜索树 中序遍历 按序进行
+二叉搜索树 中序遍历 升序进行
+
+## [538](https://leetcode.cn/problems/convert-bst-to-greater-tree/) 将二叉搜索树转换为累加树
+
+二叉搜索树 中序遍历 先右后左 降序进行，维持累加变量并赋值即可
+
+> 二叉搜索树的中序遍历问题往往是有序数组问题
+
+## [1038](https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/) 将二叉搜索树转换为累加树
+
+同力扣538，二叉搜索树 中序遍历 先右后左 降序进行，维持累加变量并赋值即可
+
+> 二叉搜索树的中序遍历问题往往是有序数组问题
