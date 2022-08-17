@@ -63,6 +63,7 @@ class Quick:
         pivot = nums[lo]
         i,j = lo+1, hi
         while True:
+            # 这里i和j处元素等不等于pivot不重要，但是要有，不然遍历不彻底，会有死循环
             while i < hi and nums[i] < pivot:
                 i += 1
             while j > lo and nums[j] >= pivot:
