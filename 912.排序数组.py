@@ -62,22 +62,23 @@ class Quick:
     def partition(self,nums,lo,hi):
         pivot = nums[lo]
         i,j = lo+1, hi
-        while i <= j:
-            while i < hi and nums[i] <= pivot:
+        while True:
+            while i < hi and nums[i] < pivot:
                 i += 1
-            while j > lo and nums[j] > pivot:
+            while j > lo and nums[j] >= pivot:
                 j -= 1
             if i >= j:
                 break
             nums[i],nums[j] = nums[j],nums[i]
-        # j是小于等于，i是一定大于，j在i前，所以换j
+        # j此时在[lo,i]的范围里，是小于等于pivot的范围，交换到前面，前半部分可以继续排序
+        # i此时在[j,hi]的范围里，是大于的范围，交换到前面，不符合pivot左部分的定义
         nums[lo],nums[j] = nums[j],nums[lo]
         return j
-    def shuffle(self,nums):
-        lennums = len(nums)
-        for idx in range(lennums):
-            randomidx = random.randint(0,lennums-1)
-            nums[idx],nums[randomidx] = nums[randomidx],nums[idx]
+    # def shuffle(self,nums):
+    #     lennums = len(nums)
+    #     for idx in range(lennums):
+    #         randomidx = random.randint(0,lennums-1)
+    #         nums[idx],nums[randomidx] = nums[randomidx],nums[idx]
 
 
 # @lc code=end
