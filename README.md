@@ -246,3 +246,7 @@ left,right=right,left
 ## [701](https://leetcode.cn/problems/insert-into-a-binary-search-tree/) 插入二叉搜索树
 
 二分搜索，找到那个空节点，插入
+
+## [450](https://leetcode.cn/problems/delete-node-in-a-bst/) 删除二叉搜索树节点
+
+二分搜索，找到那个节点，分情况删除，其中左右子节点均有的情况为算法核心，需要取左子树最大或右子树最小（矮子里挑将军是为中庸），然后删除最大值或者最小值节点（妙处在于可以调用正在写的函数）
