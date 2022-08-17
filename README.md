@@ -223,11 +223,15 @@ left,right=right,left
 
 二叉搜索树 中序遍历 升序进行
 
+参考：https://labuladong.github.io/article/fname.html?fname=BST1
+
 ## [538 将二叉搜索树转换为累加树](https://leetcode.cn/problems/convert-bst-to-greater-tree/) 
 
 二叉搜索树 中序遍历 先右后左 降序进行，维持累加变量并赋值即可
 
 > 二叉搜索树的中序遍历问题往往是有序数组问题
+
+参考：https://labuladong.github.io/article/fname.html?fname=BST1
 
 ## [1038 将二叉搜索树转换为累加树](https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/) 
 
@@ -235,22 +239,40 @@ left,right=right,left
 
 > 二叉搜索树的中序遍历问题往往是有序数组问题
 
+参考：https://labuladong.github.io/article/fname.html?fname=BST1
+
 ## [98 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/) 
 
 通过参数，将root的约束传递到子孙节点
+
+参考：https://labuladong.github.io/article/fname.html?fname=BST2
 
 ## [700 搜索二叉搜索树](https://leetcode.cn/problems/search-in-a-binary-search-tree/) 
 
 二分搜索
 
+参考：https://labuladong.github.io/article/fname.html?fname=BST2
+
 ## [701 插入二叉搜索树](https://leetcode.cn/problems/insert-into-a-binary-search-tree/) 
 
 二分搜索，找到那个空节点，插入
+
+参考：https://labuladong.github.io/article/fname.html?fname=BST2
 
 ## [450 删除二叉搜索树节点](https://leetcode.cn/problems/delete-node-in-a-bst/) 
 
 二分搜索，找到那个节点，分情况删除，其中左右子节点均有的情况为算法核心，需要取左子树最大或右子树最小（矮子里挑将军是为中庸），然后删除最大值或者最小值节点（妙处在于可以调用正在写的函数）
 
+参考：https://labuladong.github.io/article/fname.html?fname=BST2
+
 ## [96 不同的二叉搜索树](https://leetcode.cn/problems/unique-binary-search-trees/)
 
 左和右子树的组合数乘积就是根节点的组合数
+
+参考：https://labuladong.github.io/article/fname.html?fname=BST3
+
+##[95 不同的二叉搜索树 II](https://leetcode.cn/problems/unique-binary-search-trees-ii/)
+
+*左和右子树的组合笛卡尔乘积就是根节点的所有组合
+
+参考：https://labuladong.github.io/article/fname.html?fname=BST3
