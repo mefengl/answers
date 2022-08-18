@@ -308,3 +308,11 @@ left,right=right,left
 > 类似力扣236与1676题
 
 这题的特点是，节点不一定存在，所以无论如何整颗树要遍历完成，所以后序遍历（仍然要及时返回找到的节点，但这里的找到无法决定是否有祖先节点，得根据全局的flag判断）
+
+## [235 二叉搜索树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+
+由搜索二叉树性质，`p.val <= root.val <= q.val` ，则root就是最近公共祖先
+
+## [1650 二叉树的最近公共祖先-iii](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
+
+类似力扣160题，本质是求 两条链表交点
