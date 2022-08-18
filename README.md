@@ -316,3 +316,9 @@ left,right=right,left
 ## [1650 二叉树的最近公共祖先-iii](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
 
 类似力扣160题，本质是求 两条链表交点
+
+## [222 完全二叉树的节点个数](https://leetcode.cn/problems/count-complete-tree-nodes/)
+
+暴力：纯遍历，计算节点个数；
+满二叉树：2**n - 1；
+完全二叉树：子树是满二叉树（左右高度相同）用满二叉树，子树是普通树（左右高度不同）用纯遍历
