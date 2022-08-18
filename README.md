@@ -288,3 +288,7 @@ left,right=right,left
 快速排序的partition函数，在这里可以起到二分查找里结果函数的作用（ 类似nums[mid]，这里是partition(nums,lo,hi) ）
 
 > 数组可以获得长度，所以第K大可以转化成别的东西
+
+## [341 扁平化嵌套列表迭代器](https://leetcode.cn/problems/flatten-nested-list-iterator/)
+
+将头部的非整数变成整数放回去
