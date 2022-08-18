@@ -292,3 +292,7 @@ left,right=right,left
 ## [341 扁平化嵌套列表迭代器](https://leetcode.cn/problems/flatten-nested-list-iterator/)
 
 将头部的非整数变成整数放回去
+
+## [236 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/)
+
+两种情况，一种是其中节点就是要找的元素（它本身就是祖先），另一种是节点左右子树都能找到对应元素，这也是祖先（因为需要左右遍历完成，所以后序）
