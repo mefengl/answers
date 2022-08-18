@@ -296,3 +296,9 @@ left,right=right,left
 ## [236 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/)
 
 两种情况，一种是其中节点就是要找的元素（它本身就是祖先），另一种是节点左右子树都能找到对应元素，这也是祖先（因为需要左右遍历完成，所以后序）
+
+## [1676 二叉树的最近公共祖先-iv](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree-iv)
+
+> 同力扣236题，两种情况，一种是其中节点就是要找的元素（它本身就是祖先），另一种是节点左右子树都能找到对应元素，这也是祖先（因为需要左右遍历完成，所以后序）。
+
+和第一种情况就能直接判断祖先元素一样，不需要所有元素都找到，因为二叉树遍历特点，剩下的元素必然在没有遍历的子树里。
