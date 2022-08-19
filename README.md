@@ -326,3 +326,7 @@ left,right=right,left
 ## [797 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target/)
 
 图的遍历等同于多叉树遍历，但需要加上visited数组防重复访问，如果需要记录路径，则需要维护路径数组
+
+## [207 课程表](https://leetcode.cn/problems/course-schedule/)
+
+从所有节点出发一次，看是否会路径这条蛇是否会咬到自己，咬到代表成环，代表不可能学完
