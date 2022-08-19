@@ -13,14 +13,13 @@ class Solution:
         len0 = len(nums)
         dis = 100000
         for x in range(len0):
-            for y in range(x+1,len0):
-                for z in range(y+1,len0):
-                    asum = nums[x]+nums[y]+nums[z]
-                    if abs(asum-target) < dis:
-                        dis = abs(asum-target)
+            for y in range(x + 1, len0):
+                for z in range(y + 1, len0):
+                    asum = nums[x] + nums[y] + nums[z]
+                    if abs(asum - target) < dis:
+                        dis = abs(asum - target)
                         min = asum
         return min
 
 
 # @lc code=end
-

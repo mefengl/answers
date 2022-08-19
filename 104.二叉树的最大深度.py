@@ -17,7 +17,7 @@ class Solution:
         if root is None:
             return 0
         return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1
-        
+
     # # 回溯
     # max = 0
     # cur = 0
@@ -33,5 +33,6 @@ class Solution:
     #     self.maxDepth(root.right)
     #     self.cur -= 1
     #     return self.max+1
+
 
 # @lc code=end

@@ -15,18 +15,20 @@ class Node:
         self.parent = None
 """
 
+
 class Solution:
-    def lowestCommonAncestor(self, p: 'Node', q: 'Node') -> 'Node':
-        a,b = p,q
+    def lowestCommonAncestor(self, p: "Node", q: "Node") -> "Node":
+        a, b = p, q
         while a != b:
             if a is None:
                 a = q
             else:
                 a = a.parent
-            if b is None: 
+            if b is None:
                 b = p
             else:
                 b = b.parent
         return a
-        
+
+
 # @lc code=end

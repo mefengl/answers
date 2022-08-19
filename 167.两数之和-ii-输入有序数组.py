@@ -10,7 +10,7 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         lennumbers = len(numbers)
-        left, right = 0, lennumbers-1
+        left, right = 0, lennumbers - 1
         while left < right:
             sum = numbers[left] + numbers[right]
             if sum > target:
@@ -18,6 +18,6 @@ class Solution:
             elif sum < target:
                 left += 1
             else:
-                return [left+1, right+1]
+                return [left + 1, right + 1]
         return [-1, -1]
         # @lc code=end

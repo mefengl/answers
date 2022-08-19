@@ -24,4 +24,6 @@ class Solution:
         # 和数组不同，需要断开其它宿主元素
         s.next = None
         return head
+
+
 # @lc code=end

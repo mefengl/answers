@@ -28,5 +28,6 @@ class Solution:
         while p.right is not None:
             p = p.right
         p.right = right
-        
+
+
 # @lc code=end

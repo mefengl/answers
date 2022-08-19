@@ -12,6 +12,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     # # 最近公共祖先+二叉搜索
     # def find(self,root,val1,val2):
@@ -30,19 +31,23 @@ class Solution:
     #     return left if left is not None else right
 
     # 二叉搜索+最近公共祖先
-    def find(self,root,val1,val2):
-        if root is None: return None
+    def find(self, root, val1, val2):
+        if root is None:
+            return None
         if root.val > val2:
-            return self.find(root.left,val1,val2)
+            return self.find(root.left, val1, val2)
         elif root.val < val1:
-            return self.find(root.right,val1,val2)
+            return self.find(root.right, val1, val2)
         elif val1 <= root.val <= val2:
             return root
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+
+    def lowestCommonAncestor(
+        self, root: "TreeNode", p: "TreeNode", q: "TreeNode"
+    ) -> "TreeNode":
         # ensure p.val <= q.val
         if p.val > q.val:
-            p,q = q,p
-        return self.find(root,p.val,q.val)
+            p, q = q, p
+        return self.find(root, p.val, q.val)
 
-        
+
 # @lc code=end

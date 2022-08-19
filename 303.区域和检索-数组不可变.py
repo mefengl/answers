@@ -6,18 +6,17 @@
 
 # @lc code=start
 class NumArray:
-
     def __init__(self, nums: List[int]):
-        presum = [0]+nums
+        presum = [0] + nums
         for idx in range(len(presum)):
             if idx == 0:
                 continue
-            presum[idx] += presum[idx-1]
+            presum[idx] += presum[idx - 1]
         self.presum = presum
 
     def sumRange(self, left: int, right: int) -> int:
         presum = self.presum
-        return presum[right+1] - presum[left]
+        return presum[right + 1] - presum[left]
 
 
 # Your NumArray object will be instantiated and called as such:

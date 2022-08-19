@@ -13,7 +13,9 @@
 
 
 class Solution:
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+    def addTwoNumbers(
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         p1, p2 = l1, l2
         dummy = ListNode()
         p = dummy
@@ -26,8 +28,10 @@ class Solution:
             if p2 != None:
                 val += p2.val
                 p2 = p2.next
-            carry = val//10
+            carry = val // 10
             p.next = ListNode(val % 10)
             p = p.next
         return dummy.next
+
+
 # @lc code=end

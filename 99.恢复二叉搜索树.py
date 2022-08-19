@@ -12,16 +12,15 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-
     def recoverTree(self, root: Optional[TreeNode]) -> None:
         """
         Do not return anything, modify root in-place instead.
         """
-        self.first,self.second =None,None
-        self.prev = TreeNode(float('-inf'))
+        self.first, self.second = None, None
+        self.prev = TreeNode(float("-inf"))
 
-        def inorderTraverse(root:Optional[TreeNode]) -> None:
-            global first,second,prev
+        def inorderTraverse(root: Optional[TreeNode]) -> None:
+            global first, second, prev
             if root is None:
                 return
             inorderTraverse(root.left)
@@ -32,8 +31,9 @@ class Solution:
                 self.second = root
             self.prev = root
             inorderTraverse(root.right)
+
         inorderTraverse(root)
-        self.first.val,self.second.val = self.second.val,self.first.val
+        self.first.val, self.second.val = self.second.val, self.first.val
 
 
 # @lc code=end

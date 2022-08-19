@@ -12,15 +12,17 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def maxidx(self,nums):
+    def maxidx(self, nums):
         return nums.index(max(nums))
+
     def constructMaximumBinaryTree(self, nums: List[int]) -> Optional[TreeNode]:
         if not nums:
             return None
         root = TreeNode(max(nums))
         maxidx = self.maxidx(nums)
         root.left = self.constructMaximumBinaryTree(nums[:maxidx])
-        root.right = self.constructMaximumBinaryTree(nums[maxidx+1:])
+        root.right = self.constructMaximumBinaryTree(nums[maxidx + 1 :])
         return root
-        
+
+
 # @lc code=end

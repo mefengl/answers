@@ -6,9 +6,10 @@
 
 # @lc code=start
 
+
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
-        left,mid,right = 0,len(nums)//2,len(nums)
+        left, mid, right = 0, len(nums) // 2, len(nums)
         while True:
             if left >= right:
                 return mid
@@ -16,7 +17,7 @@ class Solution:
                 right = mid
             else:
                 left = mid
-            mid = (right-left)//2 + left
+            mid = (right - left) // 2 + left
+
 
 # @lc code=end
-

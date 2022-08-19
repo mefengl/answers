@@ -16,33 +16,35 @@
 class Codec:
     def serialize(self, root):
         """Encodes a tree to a single string.
-        
+
         :type root: TreeNode
         :rtype: str
         """
         if root is None:
-            return '#,'
+            return "#,"
         # # 后序
         # return self.serialize(root.left)+self.serialize(root.right)+str(root.val)+','
         # 先序
-        return str(root.val)+','+self.serialize(root.left)+self.serialize(root.right)
-
+        return (
+            str(root.val) + "," + self.serialize(root.left) + self.serialize(root.right)
+        )
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
-        
+
         :type data: str
         :rtype: TreeNode
         """
         # # 后序
         # arr = list( filter(None,data.split(',')) )
         # 先序
-        arr = list(reversed(list(filter(None,data.split(',')))))
+        arr = list(reversed(list(filter(None, data.split(",")))))
         return self.my_deserialize(arr)
+
     def my_deserialize(self, arr):
         while arr:
             res = arr.pop()
-            if res == '#':
+            if res == "#":
                 return None
             root = TreeNode(res)
             # # 后序，先右后左
@@ -54,10 +56,6 @@ class Codec:
 
             return root
 
-
-
-
-        
 
 # Your Codec object will be instantiated and called as such:
 # ser = Codec()

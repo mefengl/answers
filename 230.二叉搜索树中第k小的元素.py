@@ -15,17 +15,20 @@ class Solution:
     def __init__(self):
         self.res = 0
         self.rank = 0
-    def traverse(self,root: Optional[TreeNode], k:int)-> None:
+
+    def traverse(self, root: Optional[TreeNode], k: int) -> None:
         if root is None:
             return
-        self.traverse(root.left,k)
-        self.rank+=1
+        self.traverse(root.left, k)
+        self.rank += 1
         if self.rank == k:
             self.res = root.val
             return
-        self.traverse(root.right,k)
+        self.traverse(root.right, k)
+
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        self.traverse(root,k)
+        self.traverse(root, k)
         return self.res
+
 
 # @lc code=end

@@ -17,9 +17,11 @@ class Solution:
             result.append(val.copy())
             for idx in range(num, long):
                 val.append(nums[idx])
-                backtrack(idx+1)
+                backtrack(idx + 1)
                 val.pop()
+
         backtrack(0)
         return result
+
 
 # @lc code=end

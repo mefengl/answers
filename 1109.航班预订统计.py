@@ -7,17 +7,18 @@
 # @lc code=start
 class Solution:
     def corpFlightBookings(self, bookings: List[List[int]], n: int) -> List[int]:
-        seats = [0]*n
+        seats = [0] * n
         for booking in bookings:
             i, j, k = booking
-            seats[i-1] += k
+            seats[i - 1] += k
             if j >= n:
                 continue
             seats[j] -= k
         for idx in range(n):
             if idx == 0:
                 continue
-            seats[idx] += seats[idx-1]
+            seats[idx] += seats[idx - 1]
         return seats
+
 
 # @lc code=end

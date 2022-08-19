@@ -32,6 +32,7 @@ class Solution:
                 def put(node):
                     if node:
                         q.append(node)
+
                 put(cur.left)
                 put(cur.right)
             step += 1

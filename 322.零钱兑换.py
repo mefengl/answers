@@ -21,13 +21,14 @@ class Solution:
 
             mini = int(1e9)
             for coin in coins:
-                res = dp(rem-coin)
+                res = dp(rem - coin)
                 if res >= 0 and res < mini:
                     mini = res + 1
             self.memos[rem] = mini if mini < int(1e9) else -1
             return self.memos[rem]
 
-        self.memos = [-666]*(amount+1)
+        self.memos = [-666] * (amount + 1)
         return dp(amount)
+
 
 # @lc code=end

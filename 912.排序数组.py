@@ -13,6 +13,7 @@ class Solution:
         quick.sort(nums)
         return nums
 
+
 # # 归并排序
 # class Merge:
 #     temp = []
@@ -47,21 +48,21 @@ class Solution:
 
 # 快速排序
 class Quick:
-    def sort(self,nums):
+    def sort(self, nums):
         # self.shuffle(nums)
         random.shuffle(nums)
-        self._sort(nums,0,len(nums)-1)
+        self._sort(nums, 0, len(nums) - 1)
 
-    def _sort(self,nums,lo,hi):
+    def _sort(self, nums, lo, hi):
         if lo >= hi:
             return
-        p = self.partition(nums,lo,hi)
-        self._sort(nums,lo,p-1)
-        self._sort(nums,p+1,hi)
-    
-    def partition(self,nums,lo,hi):
+        p = self.partition(nums, lo, hi)
+        self._sort(nums, lo, p - 1)
+        self._sort(nums, p + 1, hi)
+
+    def partition(self, nums, lo, hi):
         pivot = nums[lo]
-        i,j = lo+1, hi
+        i, j = lo + 1, hi
         while True:
             # 这里i和j处元素等不等于pivot不重要，但是要有，不然遍历不彻底，会有死循环
             while i < hi and nums[i] < pivot:
@@ -70,11 +71,12 @@ class Quick:
                 j -= 1
             if i >= j:
                 break
-            nums[i],nums[j] = nums[j],nums[i]
+            nums[i], nums[j] = nums[j], nums[i]
         # j此时在[lo,i]的范围里，是小于等于pivot的范围，交换到前面，前半部分可以继续排序
         # i此时在[j,hi]的范围里，是大于的范围，交换到前面，不符合pivot左部分的定义
-        nums[lo],nums[j] = nums[j],nums[lo]
+        nums[lo], nums[j] = nums[j], nums[lo]
         return j
+
     # def shuffle(self,nums):
     #     lennums = len(nums)
     #     for idx in range(lennums):

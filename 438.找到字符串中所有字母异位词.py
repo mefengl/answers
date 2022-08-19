@@ -30,7 +30,7 @@ class Solution:
                 if window[c] == need[c]:
                     valid += 1
 
-            while right-left >= lenp:
+            while right - left >= lenp:
                 if valid == lenneed:
                     res.append(left)
                 d = s[left]

@@ -17,5 +17,7 @@ class Solution:
                 nums[slow] = nums[fast]
             fast += 1
         # 第一个不用slow赋值，返回时需考虑
-        return slow+1
+        return slow + 1
+
+
 # @lc code=end

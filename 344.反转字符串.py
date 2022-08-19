@@ -11,7 +11,7 @@ class Solution:
         Do not return anything, modify s in-place instead.
         """
         lens = len(s)
-        l, r = 0, lens-1
+        l, r = 0, lens - 1
         while l < r:
             s[l], s[r] = s[r], s[l]
             l += 1

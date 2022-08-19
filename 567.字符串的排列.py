@@ -31,7 +31,7 @@ class Solution:
             # while right-left == lens1:
             # 这里的lens1和lenneed需要通过对算法的理解区分
             # 前者确认是排列，后者是valid
-            while right-left >= lens1:
+            while right - left >= lens1:
                 if valid == lenneed:
                     return True
                 d = s2[left]

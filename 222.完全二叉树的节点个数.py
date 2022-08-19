@@ -14,9 +14,10 @@
 # 完全二叉树：子树是满二叉树用满二叉树，子树是普通树用纯遍历
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
-        if root is None: return 0
+        if root is None:
+            return 0
         l = r = root
-        hl,hr = 0,0
+        hl, hr = 0, 0
         # while O(log(n))
         while l is not None:
             hl += 1

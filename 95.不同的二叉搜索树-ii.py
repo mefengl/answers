@@ -12,14 +12,14 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def build(self, lo:int,hi:int)->List[Optional[TreeNode]]:
+    def build(self, lo: int, hi: int) -> List[Optional[TreeNode]]:
         res = []
         if lo > hi:
             res.append(None)
             return res
-        for mid in range(lo,hi+1):
-            lefts = self.build(lo,mid-1)
-            rights = self.build(mid+1,hi)
+        for mid in range(lo, hi + 1):
+            lefts = self.build(lo, mid - 1)
+            rights = self.build(mid + 1, hi)
             for left in lefts:
                 for right in rights:
                     root = TreeNode(mid)
@@ -27,6 +27,9 @@ class Solution:
                     root.right = right
                     res.append(root)
         return res
+
     def generateTrees(self, n: int) -> List[Optional[TreeNode]]:
-        return self.build(1,n)
+        return self.build(1, n)
+
+
 # @lc code=end

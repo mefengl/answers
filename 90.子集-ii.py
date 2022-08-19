@@ -17,11 +17,14 @@ class Solution:
             for idx in range(num, long):
                 # idx越不越界和0没关系，和当前层数的最左有关
                 # if idx != 0 and nums[idx] == nums[idx-1]:
-                if idx != num and nums[idx] == nums[idx-1]:
+                if idx != num and nums[idx] == nums[idx - 1]:
                     continue
                 val.append(nums[idx])
-                bt(idx+1)
+                bt(idx + 1)
                 val.pop()
+
         bt(0)
         return result
+
+
 # @lc code=end

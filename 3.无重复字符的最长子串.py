@@ -21,7 +21,8 @@ class Solution:
                 d = s[left]
                 left += 1
                 window[d] -= 1
-            maxres = max(maxres, right-left)
+            maxres = max(maxres, right - left)
         return maxres
+
 
 # @lc code=end

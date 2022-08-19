@@ -22,4 +22,6 @@ class Solution:
             s += 1
         for idx in range(s, lennums):
             nums[idx] = 0
+
+
 # @lc code=end

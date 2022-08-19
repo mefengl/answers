@@ -17,8 +17,8 @@ class Solution:
         valid = 0
         long = len(s)
         needlong = len(need)
-        start, length = 0, 2*long
-        while(right < long):
+        start, length = 0, 2 * long
+        while right < long:
             # 必要集
             c = s[right]
             right += 1
@@ -29,7 +29,7 @@ class Solution:
 
             # 局部最优集
             while valid == needlong:
-                if right-left < length:
+                if right - left < length:
                     start = left
                     length = right - left
                 d = s[left]
@@ -38,7 +38,7 @@ class Solution:
                     if need[d] == window[d]:
                         valid -= 1
                     window[d] -= 1
-        if length == 2*long:
+        if length == 2 * long:
             return ""
-        return s[start:start+length]
+        return s[start : start + length]
         # @lc code=end

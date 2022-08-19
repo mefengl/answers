@@ -14,7 +14,7 @@ class Solution:
             l -= 1
             r += 1
         # 退出条件是s[l]!=s[r]，内移1位
-        return s[l+1: r]
+        return s[l + 1 : r]
 
     def longestPalindrome(self, s: str) -> str:
         lens = len(s)
@@ -22,7 +22,7 @@ class Solution:
         lenres = len(res)
         for idx in range(lens):
             s1 = self.palindrome(s, idx, idx)
-            s2 = self.palindrome(s, idx, idx+1)
+            s2 = self.palindrome(s, idx, idx + 1)
             lens1, lens2 = len(s1), len(s2)
             if lens1 > lenres:
                 res = s1

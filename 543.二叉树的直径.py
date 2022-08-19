@@ -15,20 +15,23 @@ class Solution:
 
     # 语义清晰版
     maxD = 0
-    def maxDepth(self,root):
+
+    def maxDepth(self, root):
         if root is None:
             return 0
-        return 1 + max(self.maxDepth(root.left),self.maxDepth(root.right))
+        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
+
     def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:
         def maxDiameter(root):
             if root is None:
                 return
             left = self.maxDepth(root.left)
             right = self.maxDepth(root.right)
-            if left+right>self.maxD:
-                self.maxD = left+right
+            if left + right > self.maxD:
+                self.maxD = left + right
             maxDiameter(root.left)
             maxDiameter(root.right)
+
         maxDiameter(root)
         return self.maxD
         # self.maxDiameter = 0
@@ -41,5 +44,6 @@ class Solution:
         #     return max(left,right) + 1
         # maxDepth(root)
         # return self.maxDiameter
+
 
 # @lc code=end

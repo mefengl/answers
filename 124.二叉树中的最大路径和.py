@@ -12,16 +12,16 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    res = float('-inf')
-    def oneSideSum(self,root):
+    res = float("-inf")
+
+    def oneSideSum(self, root):
         if root is None:
             return 0
-        left = max(0,self.oneSideSum(root.left))
-        right = max(0,self.oneSideSum(root.right))
-        self.res = max(self.res,root.val+left+right)
-        return root.val+max(left,right)
+        left = max(0, self.oneSideSum(root.left))
+        right = max(0, self.oneSideSum(root.right))
+        self.res = max(self.res, root.val + left + right)
+        return root.val + max(left, right)
 
-        
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
         if root is None:
             return 0

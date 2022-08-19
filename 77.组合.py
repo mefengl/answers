@@ -15,11 +15,13 @@ class Solution:
             if len(val) == k:
                 result.append(val.copy())
                 return
-            for idx in range(num, n+1):
+            for idx in range(num, n + 1):
                 val.append(idx)
-                bt(idx+1)
+                bt(idx + 1)
                 val.pop()
+
         bt(1)
         return result
+
 
 # @lc code=end

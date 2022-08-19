@@ -15,9 +15,10 @@ class Node:
         self.next = next
 """
 
+
 class Solution:
     # 层遍历
-    def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
+    def connect(self, root: "Optional[Node]") -> "Optional[Node]":
         if root is None:
             return root
         q = deque([root])
@@ -25,7 +26,7 @@ class Solution:
             lenq = len(q)
             for idx in range(lenq):
                 n = q.popleft()
-                if idx<lenq-1:
+                if idx < lenq - 1:
                     n.next = q[0]
                 if n.left is not None:
                     q.append(n.left)
@@ -33,6 +34,5 @@ class Solution:
                     q.append(n.right)
         return root
 
-        
-        
+
 # @lc code=end

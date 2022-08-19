@@ -13,13 +13,15 @@ class Solution:
         lenmatrix = len(matrix)
         # 逆转
         for x in range(lenmatrix):
-            for y in range(x+1, lenmatrix):
+            for y in range(x + 1, lenmatrix):
                 matrix[x][y], matrix[y][x] = matrix[y][x], matrix[x][y]
         # 行翻转
         for row in matrix:
-            left, right = 0, lenmatrix-1
+            left, right = 0, lenmatrix - 1
             while left < right:
                 row[left], row[right] = row[right], row[left]
                 left += 1
                 right -= 1
+
+
 # @lc code=end

@@ -18,13 +18,16 @@ class Solution:
             if sumval > target:
                 return
             for idx in range(num, long):
-                if idx != num and candidates[idx] == candidates[idx-1]:
+                if idx != num and candidates[idx] == candidates[idx - 1]:
                     continue
                 val.append(candidates[idx])
                 sumval += candidates[idx]
-                bt(idx+1, sumval)
+                bt(idx + 1, sumval)
                 sumval -= candidates[idx]
                 val.pop()
+
         bt(0, 0)
         return res
+
+
 # @lc code=end

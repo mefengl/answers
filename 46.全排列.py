@@ -10,12 +10,12 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         long = len(nums)
-        used = [False]*long
+        used = [False] * long
         path = []
         result = []
 
         def backtrack():
-            if(len(path) == long):
+            if len(path) == long:
                 result.append(path.copy())
             for idx in range(long):
                 if used[idx] == True:
@@ -25,7 +25,9 @@ class Solution:
                 backtrack()
                 path.pop()
                 used[idx] = False
+
         backtrack()
         return result
+
 
 # @lc code=end
