@@ -354,3 +354,7 @@ beg->[end]的树结构，后序遍历能保证beg们已经访问过了，最后�
 ## [886 可能得二分法](https://leetcode.cn/problems/possible-bipartition/)
 
 和力扣785相同，是一个判断二分图的问题，需要将相互讨厌关系转化为图结构
+
+## [323 无向图中连通分量的数目](https://leetcode.cn/problems/number-of-connected-components-in-an-undirected-graph/)
+
+UNION_FIND算法，连通分量最大数目是每个节点都是一个子树（通过根节点区分），通过UNION函数遍历题目给的边，如果边的两个节点都是一个子树（通过FIND找到根节点判别），则不变，如果不是，则将两个节点合并为一个子树（同一个根节点），连通分量减一
