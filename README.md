@@ -350,3 +350,7 @@ beg->[end]的树结构，后序遍历能保证beg们已经访问过了，最后�
 
 ### BFS
 和DFS几乎相同，但通过队列来遍历
+
+## [886 可能得二分法](https://leetcode.cn/problems/possible-bipartition/)
+
+和力扣785相同，是一个判断二分图的问题，需要将相互讨厌关系转化为图结构
