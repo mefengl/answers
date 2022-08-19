@@ -330,3 +330,7 @@ left,right=right,left
 ## [207 课程表](https://leetcode.cn/problems/course-schedule/)
 
 从所有节点出发一次，看是否会路径这条蛇是否会咬到自己，咬到代表成环，代表不可能学完
+
+## [210 课程表 II](https://leetcode.cn/problems/course-schedule-ii/)
+
+beg->[end]的树结构，后序遍历能保证beg们已经访问过了，最后结果需要reverse
