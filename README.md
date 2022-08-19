@@ -322,3 +322,7 @@ left,right=right,left
 暴力：纯遍历，计算节点个数；
 满二叉树：2**n - 1；
 完全二叉树：子树是满二叉树（左右高度相同）用满二叉树，子树是普通树（左右高度不同）用纯遍历
+
+## [797 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target/)
+
+图的遍历等同于多叉树遍历，但需要加上visited数组防重复访问，如果需要记录路径，则需要维护路径数组
