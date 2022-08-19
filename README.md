@@ -329,7 +329,11 @@ left,right=right,left
 
 ## [207 课程表](https://leetcode.cn/problems/course-schedule/)
 
+### DFS
 从所有节点出发一次，看是否会路径这条蛇是否会咬到自己，咬到代表成环，代表不可能学完
+
+### BFS
+不成环的图，从入度为0的节点一个个消除，可以消除殆尽
 
 ## [210 课程表 II](https://leetcode.cn/problems/course-schedule-ii/)
 
