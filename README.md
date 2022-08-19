@@ -342,3 +342,8 @@ beg->[end]的树结构，后序遍历能保证beg们已经访问过了，最后�
 
 ### BFS
 消除（popleft）的顺序就是拓扑排序的顺序
+
+## [785 判断二分图](https://leetcode.cn/problems/is-graph-bipartite/) 
+
+### DFS
+遍历所有子树，没访问过的节点赋反色，访问过的节点检查是否为反色
