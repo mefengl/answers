@@ -337,4 +337,8 @@ left,right=right,left
 
 ## [210 课程表 II](https://leetcode.cn/problems/course-schedule-ii/)
 
+### DFS
 beg->[end]的树结构，后序遍历能保证beg们已经访问过了，最后结果需要reverse
+
+### BFS
+消除（popleft）的顺序就是拓扑排序的顺序
