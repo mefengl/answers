@@ -356,13 +356,13 @@ beg->[end]的树结构，后序遍历能保证beg们已经访问过了，最后�
 
 ## [323 无向图中连通分量的数目](https://leetcode.cn/problems/number-of-connected-components-in-an-undirected-graph/)
 
-UNION_FIND算法，连通分量最大数目是每个节点都是一个子树（通过根节点区分），通过UNION函数遍历题目给的边，如果边的两个节点都是一个子树（通过FIND找到根节点判别），则不变，如果不是，则将两个节点合并为一个子树（同一个根节点），连通分量减一
+并查集算法，连通分量最大数目是每个节点都是一个子树（通过根节点区分），通过UNION函数遍历题目给的边，如果边的两个节点都是一个子树（通过FIND找到根节点判别），则不变，如果不是，则将两个节点合并为一个子树（同一个根节点），连通分量减一
 
 参考：https://labuladong.github.io/article/fname.html?fname=UnionFind算法详解
 
 ## [130 被围绕的区域](https://leetcode.cn/problems/surrounded-regions/)
 
-UNION_FIND可以解决，用神圣的dummy连接所有BIG_O，最后没和dummy连接的是BIG_X
+并查集可以解决，用神圣的dummy连接所有BIG_O，最后没和dummy连接的是BIG_X
 
 参考：https://labuladong.github.io/article/fname.html?fname=UnionFind算法详解
 
@@ -372,3 +372,9 @@ UNION_FIND可以解决，用神圣的dummy连接所有BIG_O，最后没和dummy�
 遍历，如果!=，则两个节点必须在不同的子树中（非is_connected），否则，返回False
 
 参考：https://labuladong.github.io/article/fname.html?fname=UnionFind算法详解
+
+## [261 以图判树](https://leetcode.cn/problems/graph-valid-tree/)
+
+并查集可以解决，连接所有的边，连接之前，两条边不允许连通，否则返回False，最后，如果只生成一颗子树（uf.count == 1）返回True
+
+参考：https://labuladong.github.io/article/fname.html?fname=kruskal
