@@ -366,3 +366,10 @@ UNION_FIND算法，连通分量最大数目是每个节点都是一个子树（�
 UNION_FIND可以解决，用神圣的dummy连接所有BIG_O，最后没和dummy连接的是BIG_X
 
 参考：https://labuladong.github.io/article/fname.html?fname=UnionFind算法详解
+
+## [990 等式方程的可满足性](https://leetcode.cn/problems/satisfiability-of-equality-equations/)
+
+遍历，如果==，则两个节点必须在一个子树中，连接；
+遍历，如果!=，则两个节点必须在不同的子树中（非is_connected），否则，返回False
+
+参考：https://labuladong.github.io/article/fname.html?fname=UnionFind算法详解
