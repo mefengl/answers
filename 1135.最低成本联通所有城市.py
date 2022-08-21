@@ -36,6 +36,7 @@ class UnionFind:
 class Solution:
     def minimumCost(self, n: int, connections: List[List[int]]) -> int:
         uf = UnionFind(n)
+        # 按sort排序
         connections.sort(key=lambda x: x[2])
         min_cost = 0
         for start, end, cost in connections:
