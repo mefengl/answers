@@ -381,9 +381,17 @@ beg->[end]的树结构，后序遍历能保证beg们已经访问过了，最后�
 
 ## [1135 最低成本联通所有城市](https://leetcode.cn/problems/connecting-cities-with-minimum-cost/)
 
+### Kruskal
+
 并查集可以解决，核心是将connections按cost排序，然后逐次连接并更新cost，连接过的跳过（不然成环，不是树），最后，如果只生成一颗子树（uf.count == 1）返回True
 
 参考：https://labuladong.github.io/article/fname.html?fname=kruskal
+
+### Prim
+
+从0开始，不断切割最短边（优先队列），并切割对应节点（钝刀子），如果最后所有节点都连通，返回True，否则返回False
+
+参考：https://labuladong.github.io/article/fname.html?fname=prim算法
 
 ## [1584 连接所有点的最小费用](https://leetcode.cn/problems/connecting-cities-with-minimum-cost/)
 
