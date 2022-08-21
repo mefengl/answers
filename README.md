@@ -378,3 +378,7 @@ beg->[end]的树结构，后序遍历能保证beg们已经访问过了，最后�
 并查集可以解决，连接所有的边，连接之前，两条边不允许连通，否则返回False，最后，如果只生成一颗子树（uf.count == 1）返回True
 
 参考：https://labuladong.github.io/article/fname.html?fname=kruskal
+
+## [1135 最低成本联通所有城市](https://leetcode.cn/problems/connecting-cities-with-minimum-cost/)
+
+并查集可以解决，核心是将connections按cost排序，然后逐次连接并更新cost，连接过的跳过（不然成环，不是树），最后，如果只生成一颗子树（uf.count == 1）返回True
