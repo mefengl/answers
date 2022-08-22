@@ -417,6 +417,16 @@ beg->[end]的树结构，后序遍历能保证beg们已经访问过了，最后�
 
 Dijkstra算法，先建立graph，然后层序遍历，如果不是更小，就跳过。特殊地方在于，一条路径的最大消耗由每一步的最大值而不是总和决定
 
+参考：https://labuladong.github.io/article/fname.html?fname=dijkstra算法
+
 ## [1514 概率最大的路径](https://leetcode.cn/problems/path-with-maximum-probability/)
 
 Dijkstra算法，不过是求最大，所以相应的判断需要取反，另外优先队列需要逆序（压入时加负号，取出时回正也是一个方法）
+
+参考：https://labuladong.github.io/article/fname.html?fname=dijkstra算法
+
+## [277 搜寻名人](https://leetcode.cn/problems/find-the-celebrity/)
+
+擂台制，如果candidate认识other或者other不认识candidate，candidate都不可能是名人。最后，candidate还要和所有人再比一把（防止石头剪刀布式的胜利）
+
+参考：https://labuladong.github.io/article/fname.html?fname=名人问题
