@@ -412,3 +412,7 @@ beg->[end]的树结构，后序遍历能保证beg们已经访问过了，最后�
 *Dijkstra算法，先建立graph，然后层序遍历，如果不是更小，就跳过
 
 参考：https://labuladong.github.io/article/fname.html?fname=dijkstra算法
+
+## [1631 最小体力消耗路径](https://leetcode.cn/problems/minimum-energy-cost-to-make-walkable-road/)
+
+Dijkstra算法，先建立graph，然后层序遍历，如果不是更小，就跳过。特殊地方在于，一条路径的最大消耗由每一步的最大值而不是总和决定
