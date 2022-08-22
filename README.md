@@ -406,3 +406,9 @@ beg->[end]的树结构，后序遍历能保证beg们已经访问过了，最后�
 基本的Prim算法，除此之外，核心是build_graph，从0开始，不断切割最短边（优先队列），并切割对应节点（钝刀子），如果最后所有节点都cut过（此题一定全cut），返回True，否则返回False
 
 参考：https://labuladong.github.io/article/fname.html?fname=prim算法
+
+## [743 网络延迟时间](https://leetcode.cn/problems/network-delay-time/)
+
+*Dijkstra算法，先建立graph，然后层序遍历，如果不是更小，就跳过
+
+参考：https://labuladong.github.io/article/fname.html?fname=dijkstra算法
