@@ -8,29 +8,29 @@
 class UnionFind:
     def __init__(self, count: int):
         self.count = count
-        self.__parent = [i for i in range(count)]
+        self._parent = [i for i in range(count)]
 
     def union(self, p, q):
-        root_p = self.__find(p)
-        root_q = self.__find(q)
+        root_p = self._find(p)
+        root_q = self._find(q)
         if root_p == root_q:
             return
         else:
-            self.__parent[root_q] = root_p
+            self._parent[root_q] = root_p
             self.count -= 1
 
     def __find(self, node):
-        if self.__parent[node] != node:
+        if self._parent[node] != node:
             # 这里find的递归需要深入到parent，否则会无限递归
-            self.__parent[node] = self.__find(self.__parent[node])
-        return self.__parent[node]
+            self._parent[node] = self._find(self._parent[node])
+        return self._parent[node]
 
     def __parent(self, node):
-        return self.__parent[node]
+        return self._parent[node]
 
     def is_connected(self, p, q):
-        root_p = self.__find(p)
-        root_q = self.__find(q)
+        root_p = self._find(p)
+        root_q = self._find(q)
         return root_p == root_q
 
 

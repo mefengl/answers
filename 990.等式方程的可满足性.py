@@ -11,27 +11,27 @@ ORD_OF_SMALL_A = ord("a")
 
 class UnionFind:
     def __init__(self, count: int):
-        self.__count = count
-        self.__parent = [i for i in range(count)]
+        self._count = count
+        self._parent = [i for i in range(count)]
 
     def __find(self, node):
-        if self.__parent[node] != node:
+        if self._parent[node] != node:
             # 这一步使得return find没有必要，因为高效的find总是要修改的
-            self.__parent[node] = self.__find(self.__parent[node])
-        return self.__parent[node]
+            self._parent[node] = self._find(self._parent[node])
+        return self._parent[node]
 
     def is_connected(self, node1, node2):
-        root1 = self.__find(node1)
-        root2 = self.__find(node2)
+        root1 = self._find(node1)
+        root2 = self._find(node2)
         return root1 == root2
 
     def union(self, node1, node2):
-        root1 = self.__find(node1)
-        root2 = self.__find(node2)
+        root1 = self._find(node1)
+        root2 = self._find(node2)
         if root1 == root2:
             return
         # 要相同根节点，只能让根节点「贼父做父」
-        self.__parent[root2] = root1
+        self._parent[root2] = root1
 
 
 class Solution:

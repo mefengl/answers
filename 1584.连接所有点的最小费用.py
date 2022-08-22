@@ -9,29 +9,29 @@
 # # Kruskal
 # class UnionFind:
 #     def __init__(self, count: int) -> None:
-#         self.__count = count
-#         self.__parent = [i for i in range(count)]
+#         self._count = count
+#         self._parent = [i for i in range(count)]
 
 #     def count(self) -> int:
-#         return self.__count
+#         return self._count
 
 #     def __find(self, node: int) -> int:
-#         if self.__parent[node] != node:
-#             self.__parent[node] = self.__find(self.__parent[node])
-#         return self.__parent[node]
+#         if self._parent[node] != node:
+#             self._parent[node] = self._find(self._parent[node])
+#         return self._parent[node]
 
 #     def union(self, node1: int, node2: int) -> bool:
-#         root1 = self.__find(node1)
-#         root2 = self.__find(node2)
+#         root1 = self._find(node1)
+#         root2 = self._find(node2)
 #         if root1 == root2:
 #             return False
-#         self.__parent[root2] = root1
-#         self.__count -= 1
+#         self._parent[root2] = root1
+#         self._count -= 1
 #         return True
 
 #     def is_connected(self, node1: int, node2: int) -> bool:
-#         root1 = self.__find(node1)
-#         root2 = self.__find(node2)
+#         root1 = self._find(node1)
+#         root2 = self._find(node2)
 #         return root1 == root2
 
 
@@ -71,33 +71,33 @@ import queue
 
 class Prim:
     def __init__(self, graph) -> None:
-        self.__graph = graph
-        self.__pq = queue.PriorityQueue()
-        self.__inMST = [False] * len(graph)
-        self.__sum_cost = 0
+        self._graph = graph
+        self._pq = queue.PriorityQueue()
+        self._inMST = [False] * len(graph)
+        self._sum_cost = 0
 
-        self.__inMST[0] = True
-        self.__cut(0)
-        while not self.__pq.empty():
-            cost, _, to = self.__pq.get()
-            if self.__inMST[to]:
+        self._inMST[0] = True
+        self._cut(0)
+        while not self._pq.empty():
+            cost, _, to = self._pq.get()
+            if self._inMST[to]:
                 continue
-            self.__cut(to)
-            self.__inMST[to] = True
-            self.__sum_cost += cost
+            self._cut(to)
+            self._inMST[to] = True
+            self._sum_cost += cost
 
     def __cut(self, node: int) -> None:
-        for edge in self.__graph[node]:
+        for edge in self._graph[node]:
             to = edge[2]
-            if self.__inMST[to]:
+            if self._inMST[to]:
                 continue
-            self.__pq.put(edge)
+            self._pq.put(edge)
 
     def sum_cost(self) -> int:
-        return self.__sum_cost
+        return self._sum_cost
 
     def all_connected(self) -> bool:
-        return all(self.__inMST)
+        return all(self._inMST)
 
 
 def build_graph(points: List[List[int]]) -> List[List[int]]:
