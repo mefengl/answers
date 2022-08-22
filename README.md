@@ -436,3 +436,9 @@ Dijkstra算法，不过是求最大，所以相应的判断需要取反，另外
 *双向链表+hashmap。LRU算法要求，双向链表需要实现尾部增，头部删，各处删的方法；另外，需要根据get和put函数的情况，在中间封装一批函数（总之多做，是有逻辑的）
 
 参考：https://labuladong.github.io/article/fname.html?fname=LRU算法
+
+## [460 LFU 缓存](https://leetcode.cn/problems/lfu-cache/)
+
+*对key_to_val/freq、freq_to_keys，还有min_freq的同步更新
+
+参考：https://labuladong.github.io/article/fname.html?fname=LFU
