@@ -448,3 +448,9 @@ Dijkstra算法，不过是求最大，所以相应的判断需要取反，另外
 永远不能是4的倍数
 
 参考：labuladong的算法小抄 5.13.1
+
+## [877 石子游戏](https://leetcode.cn/problems/stone-game/)
+
+先手预定奇数或偶数堆，鉴于共偶数堆且奇数个，先手必赢
+
+参考：labuladong的算法小抄 5.13.2
