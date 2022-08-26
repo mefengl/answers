@@ -442,3 +442,9 @@ Dijkstra算法，不过是求最大，所以相应的判断需要取反，另外
 *对key_to_val/freq、freq_to_keys，还有min_freq的同步更新
 
 参考：https://labuladong.github.io/article/fname.html?fname=LFU
+
+## [292 Nim 游戏](https://leetcode.cn/problems/nim-game/)
+
+永远不能是4的倍数
+
+参考：labuladong的算法小抄 5.13.1
