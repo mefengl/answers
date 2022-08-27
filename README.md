@@ -565,3 +565,15 @@ a^k = (a^(k/2))^2 # 偶数
 *滑动窗口+单调队列
 
 参考：https://labuladong.github.io/article/fname.html?fname=单调队列
+
+## [232 用栈实现队列](https://leetcode.cn/problems/implement-queue-using-stacks/)
+
+] [
+
+参考：https://labuladong.github.io/article/fname.html?fname=队列实现栈栈实现队列
+
+## [225 用队列实现栈](https://leetcode.cn/problems/implement-stack-using-queues/)
+
+记录栈顶，有点像把队列当循环队列使用（不能根据记录的栈顶来判断循环是否完成，因为会有重复元素，用队列长度）
+
+参考：https://labuladong.github.io/article/fname.html?fname=队列实现栈栈实现队列
