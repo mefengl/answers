@@ -494,3 +494,13 @@ n&(n-1)，每次去掉最低位1，直到n为0，统计的次数即为1的个数
 原有数组和[0-n]数组异或，最后一个数即为唯一的数（注意0-n有n+1个数）
 
 参考：https://labuladong.github.io/article/fname.html?fname=常用的位操作
+
+## [172 阶乘后的零](https://leetcode.cn/problems/factorial-trailing-zeroes/)
+
+寻找有几对具有2因子的因子和具有5因子的因子，因为2的因子一定比5的因子多，所以只需要求出5的因子个数即可，自除5的和即为结果
+
+参考：https://labuladong.github.io/article/fname.html?fname=阶乘题目
+
+## [793 阶乘函数后]
+
+由力扣172题，已知求阶乘尾部0个数的方法，该方法可以作为二分法的核心函数，求出左右边界，左右边界中的元素个数即为所求
