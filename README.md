@@ -528,3 +528,16 @@ a^k = (a^(k/2))^2 # 偶数
 *可以利用异或的性质，a^a = 0，a^0 = a。若是想减小空间复杂度，可以用索引和正负当dup和mis的标记
 
 参考：https://labuladong.github.io/article/fname.html?fname=缺失和重复的元素
+
+## [382 链表随机指针](https://leetcode.cn/problems/linked-list-random-node/)
+
+
+蓄水池抽样法，即1/i * (1-1/(i+1)) * (1-1/(i+2)) * ... * (1-1/n) = 1/n
+
+参考：https://labuladong.github.io/article/fname.html?fname=水塘抽样
+
+## [398 随机数索引](https://leetcode.cn/problems/random-pick-index/)
+
+蓄水池抽样法，即1/i * (1-1/(i+1)) * (1-1/(i+2)) * ... * (1-1/n) = 1/n（会超时，哈希表更快）
+
+参考：https://leetcode.cn/problems/random-pick-index/solution/sui-ji-shu-suo-yin-by-leetcode-solution-ofsq/
