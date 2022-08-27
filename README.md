@@ -460,3 +460,9 @@ Dijkstra算法，不过是求最大，所以相应的判断需要取反，另外
 因子问题，亮着的灯泡需要具有两个相同因子，即平方数；故本题为统计n前的平方数问题，sqrt后转int即可
 
 参考：labuladong的算法小抄 5.13.3
+
+## [208 实现Trie](https://leetcode.cn/problems/implement-trie-prefix-tree/)
+
+前缀树，可以理解为嵌套的字典结构，键为字符，值为字典，如果是叶子节点，值为true，否则为字典
+
+参考：https://leetcode.com/problems/implement-trie-prefix-tree/discuss/362916
