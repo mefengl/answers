@@ -522,3 +522,9 @@ a^k = a^(k-1) * a # 奇数
 a^k = (a^(k/2))^2 # 偶数
 
 参考：https://labuladong.github.io/article/fname.html?fname=superPower
+
+## [645 错误的集合](https://leetcode.cn/problems/set-mismatch/)
+
+*可以利用异或的性质，a^a = 0，a^0 = a。若是想减小空间复杂度，可以用索引和正负当dup和mis的标记
+
+参考：https://labuladong.github.io/article/fname.html?fname=缺失和重复的元素
