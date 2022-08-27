@@ -466,3 +466,15 @@ Dijkstra算法，不过是求最大，所以相应的判断需要取反，另外
 前缀树，可以理解为嵌套的字典结构，键为字符，值为字典，如果是叶子节点，值为true，否则为字典
 
 参考：https://leetcode.com/problems/implement-trie-prefix-tree/discuss/362916
+
+## [191 位1的个数](https://leetcode.cn/problems/number-of-1-bits/)
+
+n&(n-1)，每次去掉最低位1，直到n为0，统计的次数即为1的个数
+
+参考：https://labuladong.github.io/article/fname.html?fname=常用的位操作
+
+## [231 2的幂](https://leetcode.cn/problems/power-of-two/)
+
+2的幂，只有一个1，必为最低位，所以去掉最低位1，一定为0，即n&(n-1)==0
+
+参考：https://labuladong.github.io/article/fname.html?fname=常用的位操作
