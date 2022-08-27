@@ -559,3 +559,9 @@ a^k = (a^(k/2))^2 # 偶数
 单调栈，至于循环数组的单调栈，因为单调栈的生成方式便是「下一个」更大的数，那将数组本身连接到数组的「下一个」即可。实质是让「循环的元素逆序提前入栈」，所以通过「索引模n」的方式来入栈也可以
 
 参考：https://labuladong.github.io/article/fname.html?fname=单调栈
+
+## [239 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/)
+
+*滑动窗口+单调队列
+
+参考：https://labuladong.github.io/article/fname.html?fname=单调队列
