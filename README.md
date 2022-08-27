@@ -541,3 +541,21 @@ a^k = (a^(k/2))^2 # 偶数
 蓄水池抽样法，即1/i * (1-1/(i+1)) * (1-1/(i+2)) * ... * (1-1/n) = 1/n（会超时，哈希表更快）
 
 参考：https://leetcode.cn/problems/random-pick-index/solution/sui-ji-shu-suo-yin-by-leetcode-solution-ofsq/
+
+## [496 下一个更大元素 I](https://leetcode.cn/problems/next-greater-element-i/)
+
+*单调栈
+
+参考：https://labuladong.github.io/article/fname.html?fname=单调栈
+
+## [739 每日温度](https://leetcode.cn/problems/daily-temperatures/)
+
+*单调栈，不过栈内是下一个更大的index，而不是下一个更大的数字
+
+参考：https://labuladong.github.io/article/fname.html?fname=单调栈
+
+## [503 下一个更大元素 II](https://leetcode.cn/problems/next-greater-element-ii/)
+
+单调栈，至于循环数组的单调栈，因为单调栈的生成方式便是「下一个」更大的数，那将数组本身连接到数组的「下一个」即可。实质是让「循环的元素逆序提前入栈」，所以通过「索引模n」的方式来入栈也可以
+
+参考：https://labuladong.github.io/article/fname.html?fname=单调栈
