@@ -577,3 +577,9 @@ a^k = (a^(k/2))^2 # 偶数
 记录栈顶，有点像把队列当循环队列使用（不能根据记录的栈顶来判断循环是否完成，因为会有重复元素，用队列长度）
 
 参考：https://labuladong.github.io/article/fname.html?fname=队列实现栈栈实现队列
+
+## [355 设计推特](https://leetcode.cn/problems/design-twitter/)
+
+*OOP，以及优先队列（多关注如何获取最新的K条推文）
+
+参考：https://labuladong.github.io/article/fname.html?fname=设计Twitter
