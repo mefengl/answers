@@ -501,7 +501,7 @@ n&(n-1)，每次去掉最低位1，直到n为0，统计的次数即为1的个数
 
 参考：https://labuladong.github.io/article/fname.html?fname=阶乘题目
 
-## [793 阶乘函数后]
+## [793 阶乘函数后K个零](https://leetcode.cn/problems/preimage-size-of-factorial-k/)
 
 由力扣172题，已知求阶乘尾部0个数的方法，该方法可以作为二分法的核心函数，求出左右边界，左右边界中的元素个数即为所求
 
