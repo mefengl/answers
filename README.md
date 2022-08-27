@@ -478,3 +478,19 @@ n&(n-1)，每次去掉最低位1，直到n为0，统计的次数即为1的个数
 2的幂，只有一个1，必为最低位，所以去掉最低位1，一定为0，即n&(n-1)==0
 
 参考：https://labuladong.github.io/article/fname.html?fname=常用的位操作
+
+## [136 只出现一次的数字](https://leetcode.cn/problems/single-number/)
+
+> 一个数和它本身做异或运算结果为 0，即 a ^ a = 0；一个数和 0 做异或运算的结果为它本身，即 a ^ 0 = a。
+
+全部异或后，最后一个数即为唯一的数
+
+参考：https://labuladong.github.io/article/fname.html?fname=常用的位操作
+
+## [268 丢失的数字](https://leetcode.cn/problems/missing-number/)
+
+> 一个数和它本身做异或运算结果为 0，即 a ^ a = 0；一个数和 0 做异或运算的结果为它本身，即 a ^ 0 = a。
+
+原有数组和[0-n]数组异或，最后一个数即为唯一的数（注意0-n有n+1个数）
+
+参考：https://labuladong.github.io/article/fname.html?fname=常用的位操作
