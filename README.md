@@ -512,3 +512,13 @@ n&(n-1)，每次去掉最低位1，直到n为0，统计的次数即为1的个数
 非素数因子的对称性（sqrt(n)），筛法（if is_prime[idx]），筛法的起始（idx*idx）
 
 参考：https://labuladong.github.io/article/fname.html?fname=打印素数
+
+## [372 超级次方](https://leetcode.cn/problems/super-pow/)
+
+a^[1,2,k] = a^k * a^[1,2,k] = a^k * (a^[1,2])^10
+
+a^k = a^(k-1) * a # 奇数
+
+a^k = (a^(k/2))^2 # 偶数
+
+参考：https://labuladong.github.io/article/fname.html?fname=superPower
