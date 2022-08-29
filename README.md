@@ -583,3 +583,9 @@ a^k = (a^(k/2))^2 # 偶数
 *OOP，以及优先队列（多关注如何获取最新的K条推文）
 
 参考：https://labuladong.github.io/article/fname.html?fname=设计Twitter
+
+## [322 零钱兑换](https://leetcode.cn/problems/coin-change/)
+
+dp[idx] = min(dp[idx - coin] + 1, dp[idx])
+
+参考：https://labuladong.github.io/article/fname.html?fname=动态规划详解进阶

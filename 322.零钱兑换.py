@@ -5,30 +5,21 @@
 #
 
 # @lc code=start
-from typing import List
-
-
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        def dp(rem):
-            memos = self.memos
-            if rem == 0:
-                return 0
-            if rem < 0:
-                return -1
-            if memos[rem] != -666:
-                return memos[rem]
-
-            mini = int(1e9)
+        dp = [amount + 1 for _ in range(amount + 1)]
+        dp[0] = 0
+        for idx, _ in enumerate(dp):
             for coin in coins:
-                res = dp(rem - coin)
-                if res >= 0 and res < mini:
-                    mini = res + 1
-            self.memos[rem] = mini if mini < int(1e9) else -1
-            return self.memos[rem]
-
-        self.memos = [-666] * (amount + 1)
-        return dp(amount)
+                if idx - coin < 0:
+                    continue
+                # 不能使用item，因为内循环中item是不变的
+                # dp[idx] = min(dp[idx-coin]+1,item)
+                dp[idx] = min(dp[idx - coin] + 1, dp[idx])
+        res = dp[-1]
+        if res == amount + 1:
+            return -1
+        return res
 
 
 # @lc code=end
