@@ -634,3 +634,13 @@ a^k = (a^(k/2))^2 # 偶数
 ```
 
 ` dp[i][j] = 1 + min(dp[i - 1][j - 1], dp[i][j - 1], dp[i - 1][j]) `
+
+## [53 最大子数组和](https://leetcode.cn/problems/maximum-subarray/)
+
+dp值指以序号所在元素为结尾的子数组和，两种状态转移方式，一种是继承，另一种是另起炉灶
+
+` dp[idx] = max(dp[idx] + dp[idx - 1], dp[idx]) `
+
+也可用前缀和来写，max_sum = presum[i] - min_presum)
+
+参考：https://labuladong.github.io/article/fname.html?fname=最大子数组
