@@ -602,3 +602,9 @@ dp[idx] = min(dp[idx - coin] + 1, dp[idx])
 *O(n*log(n))的方法需要借助耐心算法的堆数和二分左搜索
 
 参考：https://labuladong.github.io/article/fname.html?fname=动态规划设计%EF%BC%9A最长递增子序列
+
+## [931 下降路径最小和](https://leetcode.cn/problems/mini-sum-of-path-sum/)
+
+二维遍历，dp[i][j] = min(dp[i - 1][j - 1], dp[i-1][j], dp[i-1][j + 1]) + matrix[i][j] （直接matrix当dp用也可）
+
+参考：常识和动态规划套路
