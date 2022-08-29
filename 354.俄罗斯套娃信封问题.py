@@ -2,52 +2,63 @@
 # @lc app=leetcode.cn id=354 lang=python3
 #
 # [354] 俄罗斯套娃信封问题
-# 二维平面的最长子序列问题
-# 宽度升序，保证一维包含
-# 高度降序，保证二维不包含重复宽度（同样宽度下，高度前面的高度只可能比它大，所以不会重复）
 #
 
 # @lc code=start
-import functools
+
+# O(n*log(n))解法，耐心排序，二分搜索
+
+
+def left_bi_search(nums: List[int], target: int) -> int:
+    # 闭集合，len(nums)-1
+    left, right = 0, len(nums) - 1
+    while left <= right:
+        mid = left + (right - left) // 2
+        if nums[mid] > target:
+            right = mid - 1
+        elif nums[mid] < target:
+            left = mid + 1
+        elif nums[mid] == target:
+            right = mid - 1
+    # 边界有两种情况，0的话代表比top都小，放最左边
+    # 越界的话，代表比top都大，新建pile
+    return left
+
+
+def poker_piles_num(nums: List[int]) -> int:
+    len_nums = len(nums)
+    top = []
+    for idx, poker in enumerate(nums):
+        put_idx = left_bi_search(top, poker)
+        if put_idx == len(top):
+            top.append(poker)
+            continue
+        top[put_idx] = poker
+    return len(top)
 
 
 class Solution:
     def maxEnvelopes(self, envelopes: List[List[int]]) -> int:
-        se = sorted(
-            envelopes,
-            key=functools.cmp_to_key(
-                lambda x, y: 1
-                if x[0] > y[0]
-                else -1
-                if x[0] < y[0]
-                else 1
-                if x[1] < y[1]
-                else -1
-                if x[1] > y[1]
-                else 0
-            ),
-        )
+        envelopes.sort(key=lambda x: [x[0], -x[1]])
+        heights = [x[1] for x in envelopes]
+        len_heights = len(heights)
+        return poker_piles_num(heights)
 
-        def lengthofLIS(nums: List[int]):
-            long = len(nums)
-            top = [-666] * (long + 1)
-            piles = 0
-            for idx in range(long):
-                poker = nums[idx]
-                l, r = 0, piles
-                while l <= r:
-                    m = l + (r - l) // 2
-                    if top[m] > poker:
-                        r = m - 1
-                    elif top[m] < poker:
-                        l = m + 1
-                    else:
-                        r = m - 1
-                if l > piles:
-                    piles += 1
-                top[l] = poker
-            return piles
 
-        height = [x[1] for x in se]
-        return lengthofLIS(height)
-        # @lc code=end
+# # O(n^2)解法
+# class Solution:
+#     def maxEnvelopes(self, envelopes: List[List[int]]) -> int:
+#         envelopes.sort(key=lambda x: [x[0], -x[1]])
+#         len_envelopes = len(envelopes)
+#         dp = [1 for _ in range(len_envelopes)]
+#         for i, _ in enumerate(dp):
+#             for j in range(i):
+#                 # 因为宽度严格递增的情况下，宽度上一定足够
+#                 # 而且高度严格递减，统计高度的递增数列，也就是说相同宽度没有递增，所以相同宽度不会统计
+#                 if envelopes[j][1] >= envelopes[i][1]:
+#                     continue
+#                 dp[i] = max(dp[j] + 1, dp[i])
+#         return max(dp)
+
+
+# @lc code=end

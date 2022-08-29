@@ -589,3 +589,16 @@ a^k = (a^(k/2))^2 # 偶数
 dp[idx] = min(dp[idx - coin] + 1, dp[idx])
 
 参考：https://labuladong.github.io/article/fname.html?fname=动态规划详解进阶
+
+## [300 最长上升子序列](https://leetcode.cn/problems/longest-increasing-subsequence/)
+
+最长递增子序列问题，dp[i] = max(dp[i], dp[j] + 1)
+
+参考：https://labuladong.github.io/article/fname.html?fname=动态规划设计%EF%BC%9A最长递增子序列
+
+## [354 俄罗斯套娃信封](https://leetcode.cn/problems/russian-doll-envelopes/)
+
+二维最长递增子序列问题，宽度升序，保证一维包含，高度降序，保证二维不包含重复宽度（同样宽度下，高度前面的高度只可能比它大，所以不会重复），求高度的最长递增子序列，时间复杂度O(n^2)，会超时;
+*O(n*log(n))的方法需要借助耐心算法的堆数和二分左搜索
+
+参考：https://labuladong.github.io/article/fname.html?fname=动态规划设计%EF%BC%9A最长递增子序列
