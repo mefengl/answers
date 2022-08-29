@@ -586,13 +586,13 @@ a^k = (a^(k/2))^2 # 偶数
 
 ## [322 零钱兑换](https://leetcode.cn/problems/coin-change/)
 
-dp[idx] = min(dp[idx - coin] + 1, dp[idx])
+`dp[idx] = min(dp[idx - coin] + 1, dp[idx])`
 
 参考：https://labuladong.github.io/article/fname.html?fname=动态规划详解进阶
 
 ## [300 最长上升子序列](https://leetcode.cn/problems/longest-increasing-subsequence/)
 
-最长递增子序列问题，dp[i] = max(dp[i], dp[j] + 1)
+最长递增子序列问题，`dp[i] = max(dp[i], dp[j] + 1)`
 
 参考：https://labuladong.github.io/article/fname.html?fname=动态规划设计%EF%BC%9A最长递增子序列
 
@@ -605,6 +605,6 @@ dp[idx] = min(dp[idx - coin] + 1, dp[idx])
 
 ## [931 下降路径最小和](https://leetcode.cn/problems/mini-sum-of-path-sum/)
 
-二维遍历，dp[i][j] = min(dp[i - 1][j - 1], dp[i-1][j], dp[i-1][j + 1]) + matrix[i][j] （直接matrix当dp用也可）
+`dp[i][j] = min(dp[i - 1][j - 1], dp[i-1][j], dp[i-1][j + 1]) + matrix[i][j]`（直接matrix当dp用也可）
 
 参考：常识和动态规划套路
