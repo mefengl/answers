@@ -669,3 +669,11 @@ dp 值指以序号所在元素为结尾的子数组和，两种状态转移方�
 力扣1143和583题解法的综合，即，`最小ASCII删除和 = ASCII总和 - 2 * 最大的公共子序列ASCII和`
 
 参考：https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/discuss/1196499
+
+## [516 最长回文子序列](https://leetcode.com/problems/longest-palindromic-subsequence/)
+
+初始值：`dp[i][i] = 1`，单个字符回文
+
+`dp[i][j] = 2 + dp[i - 1][j - 1] if text[i] == text[j] else max(dp[i][j - 1], dp[i + 1][j])`
+
+dp[i][j]表示以i,j为结尾的最长回文子序列长度，由此可知i < j，且由递推公式可知，需从下往上遍历
