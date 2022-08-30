@@ -663,3 +663,9 @@ dp 值指以序号所在元素为结尾的子数组和，两种状态转移方�
 多余字符数 = 总字符数 - 2 * 最长公共子序列长度
 
 参考：https://labuladong.github.io/article/fname.html?fname=LCS
+
+## [712 两个字符串的最小ASCII删除和](https://leetcode.cn/problems/minimum-ascii-delete-sum-for-two-strings/)
+
+力扣1143和583题解法的综合，即，`最小ASCII删除和 = ASCII总和 - 2 * 最大的公共子序列ASCII和`
+
+参考：https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/discuss/1196499
