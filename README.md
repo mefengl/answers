@@ -654,6 +654,12 @@ dp 值指以序号所在元素为结尾的子数组和，两种状态转移方�
 
 ## [1143 最长公共子序列](https://leetcode.cn/problems/longest-common-subsequence/)
 
-如果字符不匹配，`dp[i][j] = max(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1])`（左上角可省略，因为一定不同时大于它的右边和下边）；如果匹配，`dp[i][j] = dp[i - 1][j - 1] + 1`（取左上角，因为每个字母只能计算一次，如果取上和左的话，其实包含了 text1 或 text2 重复选取的风险）
+`dp[i][j] = dp[i - 1][j - 1] + 1 if text1[i] == text2[j] else max(dp[i - 1][j], dp[i][j - 1])`（字符相同时，取左上角，因为每个字母只能计算一次，如果取上和左的话，其实包含了 text1 或 text2 重复选取的风险；字符不同时，左上角省略，因为它一定不同时大于它的右边和下边）
+
+参考：https://labuladong.github.io/article/fname.html?fname=LCS
+
+## [583 两个字符串的删除操作](https://leetcode.cn/problems/delete-operation-for-two-strings/)
+
+多余字符数 = 总字符数 - 2 * 最长公共子序列长度
 
 参考：https://labuladong.github.io/article/fname.html?fname=LCS
