@@ -677,3 +677,5 @@ dp 值指以序号所在元素为结尾的子数组和，两种状态转移方�
 `dp[i][j] = 2 + dp[i - 1][j - 1] if text[i] == text[j] else max(dp[i][j - 1], dp[i + 1][j])`
 
 dp[i][j]表示以i,j为结尾的最长回文子序列长度，由此可知i < j，且由递推公式可知，需从下往上遍历
+
+参考：https://labuladong.github.io/article/fname.html?fname=子序列问题模板
