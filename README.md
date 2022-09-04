@@ -701,3 +701,9 @@ dp[i][j]表示以i,j为结尾的最长回文子序列长度，由此可知i < j�
 3种硬币凑出5 = 2个硬币凑出5 + 3种硬币凑出(5-第三个币值) ，后者带来重复选
 
 参考：https://labuladong.github.io/article/fname.html?fname=背包零钱
+
+## [494 目标和](https://leetcode-cn.com/problems/target-sum/)
+
+`dp[i][j] = dp[i - 1][j - nums[i - 1]] + dp[i - 1][j + nums[i - 1]]`
+
+j需要从0遍历，nums[i-1]为0的情况下，需要更新值的，因为+0-0都可以凑出0，遍历的话，刚好 dp[i][j] = dp[i - 1][j] + dp[i - 1][j - 0]达到了这一效果
