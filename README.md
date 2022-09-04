@@ -709,3 +709,11 @@ dp[i][j]表示以i,j为结尾的最长回文子序列长度，由此可知i < j�
 j需要从0遍历，nums[i-1]为0的情况下，需要更新值的，因为+0-0都可以凑出0，遍历的话，刚好 dp[i][j] = dp[i - 1][j] + dp[i - 1][j - 0]达到了这一效果
 
 参考：https://labuladong.github.io/article/fname.html?fname=targetSum
+
+## [64 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/)
+
+dp初始化中的首行和首列需要转换为grid的前缀和
+
+`dp[i][j] += min(dp[i - 1][j], dp[i][j - 1])`
+
+参考：https://labuladong.github.io/article/fname.html?fname=最小路径和
