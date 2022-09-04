@@ -685,3 +685,17 @@ dp[i][j]表示以i,j为结尾的最长回文子序列长度，由此可知i < j�
 最小插入次数 = 字符串长度 - 最长回文子序列长度
 
 参考：https://labuladong.github.io/article/fname.html?fname=子序列问题模板
+
+## [416 分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)
+
+01背包问题，背包容量为sum(nums) // 2
+`dp[i][j] = dp[i - 1][j] or dp[i - 1][j - nums[i-1]]`
+
+参考：https://labuladong.github.io/article/fname.html?fname=背包子集
+
+## [518 零钱兑换 II](https://leetcode-cn.com/problems/coin-change-2/)
+
+`dp[i][j] = dp[i-1][j] + dp[i][j-coins[idx_coins]]`
+3种硬币凑出5 = 2个硬币凑出5 + 3种硬币凑出(5-第三个币值) ，后者带来重复选
+
+参考：https://labuladong.github.io/article/fname.html?fname=背包零钱
