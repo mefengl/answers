@@ -717,3 +717,9 @@ dp初始化中的首行和首列需要转换为grid的前缀和
 `dp[i][j] += min(dp[i - 1][j], dp[i][j - 1])`
 
 参考：https://labuladong.github.io/article/fname.html?fname=最小路径和
+
+## [174 地下城游戏](https://leetcode-cn.com/problems/dungeon-game/)
+
+*遍历的是每处的「最小血量」，且需要逆序遍历。注意血量的最小值为1，因为血量为0或负数时，游戏就结束了。
+
+参考：https://labuladong.github.io/article/fname.html?fname=魔塔
