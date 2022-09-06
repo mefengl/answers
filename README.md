@@ -723,3 +723,15 @@ dp初始化中的首行和首列需要转换为grid的前缀和
 *遍历的是每处的「最小血量」，且需要逆序遍历。注意血量的最小值为1，因为血量为0或负数时，游戏就结束了。
 
 参考：https://labuladong.github.io/article/fname.html?fname=魔塔
+
+## [514 自由之路](https://leetcode-cn.com/problems/freedom-trail/)
+
+状态是指针在ring和key的位置，dp[i][j]表示指针在ring的i位置，key的j位置时，最少需要多少步
+
+`dp[i][j] = min(dp[i][j], dp[i - 1][k] + min(abs(j - k), n - abs(j - k)))`
+
+参考：https://leetcode.cn/problems/freedom-trail/solution/er-xu-cheng-ming-jiu-xu-zui-by-liupengsa-aqk2/
+
+另，递归方法：
+
+参考：https://labuladong.github.io/article/fname.html?fname=转盘
