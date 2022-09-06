@@ -735,3 +735,9 @@ dp初始化中的首行和首列需要转换为grid的前缀和
 另，递归方法：
 
 参考：https://labuladong.github.io/article/fname.html?fname=转盘
+
+## [787 K 站中转内最便宜的航班](https://leetcode-cn.com/problems/cheapest-flights-within-k-stops/)
+
+*BFS结合优先队列，Dijkstra的思路
+
+参考：https://labuladong.github.io/article/fname.html?fname=旅行最短路径
