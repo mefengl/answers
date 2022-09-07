@@ -10,6 +10,7 @@
 import queue
 
 
+# BFS
 def build_graph(paths: List[List[int]]):
     res = collections.defaultdict(list)
     for beg, end, cost in paths:
@@ -23,31 +24,18 @@ class Solution:
     ) -> int:
         graph = build_graph(flights)
         pq = queue.PriorityQueue()
-        cost_to = [float("inf")] * n
-        transited_to = [float("inf")] * n
-        for cost, end in graph[src]:
-            pq.put((cost, 0, end))
+        # 用于剪枝
+        visited_times = [0] * n
+        pq.put((0, k + 1, src))
         while not pq.empty():
-            cost, transited, end = pq.get()
+            cost, visited, end = pq.get()
             if end == dst:
                 return cost
-            # 剩余中转次数，等于0代表这里就应当是终点了，当然并不是
-            if transited == k:
+            if visited_times[end] >= visited:
                 continue
-            for item in graph[end]:
-                cur_cost, cur_end = item
-                next_cost = cur_cost + cost
-                next_transited = transited + 1
-                if next_cost < cost_to[cur_end]:
-                    cost_to[cur_end] = next_cost
-                    transited_to[cur_end] = next_transited
-                # 通过最小值来防止死循环
-                elif (
-                    next_cost > cost_to[cur_end]
-                    and next_transited > transited_to[cur_end]
-                ):
-                    continue
-                pq.put((cur_cost + cost, next_transited, cur_end))
+            visited_times[end] = visited
+            for cur_cost, cur_end in graph[end]:
+                pq.put((cur_cost + cost, visited - 1, cur_end))
         return -1
 
 
