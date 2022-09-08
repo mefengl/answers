@@ -747,3 +747,9 @@ dp初始化中的首行和首列需要转换为grid的前缀和
 `dp[t][end] = min(dp[t][end], dp[t - 1][beg] + cost)`
 
 参考：https://leetcode.cn/problems/cheapest-flights-within-k-stops/solution/k-zhan-zhong-zhuan-nei-zui-bian-yi-de-ha-abzi/
+
+## [10 正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/)
+
+*状态是s的指针和p的指针，dp[i][j]表示i和j前的s和p片段是否匹配
+
+参考：https://leetcode.cn/problems/regular-expression-matching/solution/zheng-ze-biao-da-shi-pi-pei-by-leetcode-solution/
