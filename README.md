@@ -771,3 +771,11 @@ dp初始化中的首行和首列需要转换为grid的前缀和
 `dp[i][j] = max(dp[i][j], last_coins(i, k, j) + dp[i][k] + dp[k][j])`
 
 参考：https://labuladong.github.io/article/fname.html?fname=扎气球
+
+## [486 预测赢家](https://leetcode-cn.com/problems/predict-the-winner/)
+
+状态是左右指针，dp[i][j]表示i和j开区间中先手和后手能得到的最大分数
+
+先手后手是相对的，这把的先手是相对于上一把的后手，所以，先手的最大分数是max(先手拿左边 + 后手拿左边，先手拿右边 + 后手拿右边)
+
+参考：https://labuladong.github.io/article/fname.html?fname=动态规划之博弈问题
