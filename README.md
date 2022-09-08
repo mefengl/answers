@@ -779,3 +779,11 @@ dp初始化中的首行和首列需要转换为grid的前缀和
 先手后手是相对的，这把的先手是相对于上一把的后手，所以，先手的最大分数是max(先手拿左边 + 后手拿左边，先手拿右边 + 后手拿右边)
 
 参考：https://labuladong.github.io/article/fname.html?fname=动态规划之博弈问题
+
+## [651 4键键盘](https://leetcode-cn.com/problems/4-keys-keyboard/)
+
+状态是总步数，dp[i]表示i步能得到的最多A
+
+`dp[i] = max(dp[i-1] + 1, dp[j - 2] * (i - j + 1))`
+
+参考：https://labuladong.github.io/article/fname.html?fname=动态规划之四键键盘
