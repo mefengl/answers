@@ -763,3 +763,11 @@ dp初始化中的首行和首列需要转换为grid的前缀和
 目前O(MN)复杂度的算法，第一个鸡蛋永远是从最高层扔下的，所以，无论碎还是没碎，都能确定最高层（+ 1），如果鸡蛋碎了，那就是少步少蛋（+ dp[i - 1][j - 1]），如果没碎，那就只是少步（+ dp[i - 1][j]）
 
 参考：https://leetcode.com/problems/super-egg-drop/discuss/443089
+
+## [312 戳气球](https://leetcode-cn.com/problems/burst-balloons/)
+
+状态是左右指针，dp[i][j]表示i和j开区间中气球最多能得到多少分，方式是遍历最后一个戳破的气球k（k in [i+1, j-1]）
+
+`dp[i][j] = max(dp[i][j], last_coins(i, k, j) + dp[i][k] + dp[k][j])`
+
+参考：https://labuladong.github.io/article/fname.html?fname=扎气球
