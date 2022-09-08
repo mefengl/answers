@@ -803,3 +803,12 @@ nums[i - 2]是因为nums是从0开始的，i是从2开始的，相当于nums[0]�
 同力扣198题，只是多了一个限制，第一间和最后一间不能同时偷，所以，可以分成两种情况，一种是偷第一间，一种是不偷第一间，然后取最大值
 
 参考：https://labuladong.github.io/article/fname.html?fname=抢房子
+
+## [337 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/)
+
+
+偷与不偷，偷就只能不偷子节点，不偷就能自由选择是否偷子节点
+
+`return (root.val + left[1] + right[1], max(left) + max(right))`
+
+参考：https://leetcode.com/problems/house-robber-iii/discuss/376297
