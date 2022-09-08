@@ -753,3 +753,13 @@ dp初始化中的首行和首列需要转换为grid的前缀和
 *状态是s的指针和p的指针，dp[i][j]表示i和j前的s和p片段是否匹配
 
 参考：https://leetcode.cn/problems/regular-expression-matching/solution/zheng-ze-biao-da-shi-pi-pei-by-leetcode-solution/
+
+## [887 鸡蛋掉落](https://leetcode-cn.com/problems/super-egg-drop/)
+
+状态是步数和鸡蛋数，dp[i][j]表示i步j个鸡蛋最多能测多少层
+
+`dp[i][j] = 1 + dp[i - 1][j] + dp[i - 1][j - 1]`
+
+目前O(MN)复杂度的算法，第一个鸡蛋永远是从最高层扔下的，所以，无论碎还是没碎，都能确定最高层（+ 1），如果鸡蛋碎了，那就是少步少蛋（+ dp[i - 1][j - 1]），如果没碎，那就只是少步（+ dp[i - 1][j]）
+
+参考：https://leetcode.com/problems/super-egg-drop/discuss/443089
