@@ -797,3 +797,9 @@ dp初始化中的首行和首列需要转换为grid的前缀和
 nums[i - 2]是因为nums是从0开始的，i是从2开始的，相当于nums[0]前面加了两个0
 
 参考：https://labuladong.github.io/article/fname.html?fname=抢房子
+
+## [213 打家劫舍 II](https://leetcode-cn.com/problems/house-robber-ii/)
+
+同力扣198题，只是多了一个限制，第一间和最后一间不能同时偷，所以，可以分成两种情况，一种是偷第一间，一种是不偷第一间，然后取最大值
+
+参考：https://labuladong.github.io/article/fname.html?fname=抢房子
