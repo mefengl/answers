@@ -787,3 +787,13 @@ dp初始化中的首行和首列需要转换为grid的前缀和
 `dp[i] = max(dp[i-1] + 1, dp[j - 2] * (i - j + 1))`
 
 参考：https://labuladong.github.io/article/fname.html?fname=动态规划之四键键盘
+
+## [198 打家劫舍](https://leetcode-cn.com/problems/house-robber/)
+
+状态是房子的指针，dp[i]表示偷到第i个房子的最大金额，这里正序逆序均可
+
+`dp[i] = max(dp[i - 1], nums[i - 2] + dp[i - 2])`
+
+nums[i - 2]是因为nums是从0开始的，i是从2开始的，相当于nums[0]前面加了两个0
+
+参考：https://labuladong.github.io/article/fname.html?fname=抢房子
