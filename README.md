@@ -917,3 +917,18 @@ k > n / 2，可以认为k=+∞
 时间线上，遇到start，count+=1，遇到end，count-=1，count的最大值就是所需会议室数
 
 参考：https://labuladong.github.io/article/fname.html?fname=安排会议室
+
+## [1024 视频拼接](https://leetcode-cn.com/problems/video-stitching/)
+
+
+### 跳跃游戏
+
+`lo, hi = hi, max(max_jumps[lo:hi + 1])`
+
+参考：https://leetcode.com/problems/video-stitching/discuss/484877
+
+### labuladong
+
+用while循环实现了max_jumps[lo:hi + 1]，相对而言比较复杂，更推荐直接采用跳跃游戏的思路
+
+参考：https://labuladong.github.io/article/fname.html?fname=剪视频
