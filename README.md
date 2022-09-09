@@ -822,3 +822,13 @@ nums[i - 2]是因为nums是从0开始的，i是从2开始的，相当于nums[0]�
 由题，k=1，dp[i - 1][k - 1][0] = dp[i - 1][0][0] = 0
 
 参考：https://labuladong.github.io/article/fname.html?fname=团灭股票问题
+
+## [122 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)
+
+`dp[i][k][0] = max(dp[i - 1][k][0], dp[i - 1][k][1] + prices[i])`
+
+`dp[i][k][1] = max(dp[i - 1][k][1], dp[i - 1][k - 1][0] - prices[i])`
+
+由题，k=+∞，dp[i - 1][k - 1][0] = dp[i - 1][k][0]，k不变，可以省略
+
+参考：https://labuladong.github.io/article/fname.html?fname=团灭股票问题
