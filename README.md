@@ -867,3 +867,13 @@ nums[i - 2]是因为nums是从0开始的，i是从2开始的，相当于nums[0]�
 由题，k = 2
 
 参考：https://labuladong.github.io/article/fname.html?fname=团灭股票问题
+
+## [188 买卖股票的最佳时机 IV](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/)
+
+`dp[i][k][0] = max(dp[i - 1][k][0], dp[i - 1][k][1] + prices[i])`
+
+`dp[i][k][1] = max(dp[i - 1][k][1], dp[i - 1][k - 1][0] - prices[i])`
+
+k > n / 2，可以认为k=+∞
+
+参考：https://labuladong.github.io/article/fname.html?fname=团灭股票问题
