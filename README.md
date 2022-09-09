@@ -911,3 +911,9 @@ k > n / 2，可以认为k=+∞
 下一个最早end = start于当前最早end后的最早end
 
 参考：https://labuladong.github.io/article/fname.html?fname=贪心算法之区间调度问题
+
+## [253 会议室 II](https://leetcode-cn.com/problems/meeting-rooms-ii/)
+
+时间线上，遇到start，count+=1，遇到end，count-=1，count的最大值就是所需会议室数
+
+参考：https://labuladong.github.io/article/fname.html?fname=安排会议室
