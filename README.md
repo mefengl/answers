@@ -897,3 +897,9 @@ k > n / 2，可以认为k=+∞
 *建立自动机的转移表，然后遍历字符串，根据转移表，进行状态转移
 
 参考：https://labuladong.github.io/article/fname.html?fname=动态规划之KMP字符匹配算法
+
+## [435 无重叠区间](https://leetcode-cn.com/problems/non-overlapping-intervals/)
+
+下一个最早end = start于当前最早end后的最早end
+
+参考：https://labuladong.github.io/article/fname.html?fname=贪心算法之区间调度问题
