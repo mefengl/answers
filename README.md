@@ -833,8 +833,7 @@ nums[i - 2]是因为nums是从0开始的，i是从2开始的，相当于nums[0]�
 
 参考：https://labuladong.github.io/article/fname.html?fname=团灭股票问题
 
-## [123 买卖股票的最佳时机 III](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/)
-
+## [309 最佳买卖股票时机含冷冻期](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
 
 `dp[i][k][0] = max(dp[i - 1][k][0], dp[i - 1][k][1] + prices[i])`
 
