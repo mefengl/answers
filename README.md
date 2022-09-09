@@ -920,10 +920,9 @@ k > n / 2，可以认为k=+∞
 
 ## [1024 视频拼接](https://leetcode-cn.com/problems/video-stitching/)
 
-
 ### 跳跃游戏
 
-`lo, hi = hi, max(max_jumps[lo:hi + 1])`
+`lo, hi = hi, max(max_jumps[lo : hi + 1])`
 
 参考：https://leetcode.com/problems/video-stitching/discuss/484877
 
@@ -932,3 +931,19 @@ k > n / 2，可以认为k=+∞
 用while循环实现了max_jumps[lo:hi + 1]，相对而言比较复杂，更推荐直接采用跳跃游戏的思路
 
 参考：https://labuladong.github.io/article/fname.html?fname=剪视频
+
+## [55 跳跃游戏](https://leetcode-cn.com/problems/jump-game/)
+
+`max_jump = max(max_jump, i + num)`
+
+终止条件是 i > max_jump，或 max_jump < i，这意味着i已经是不可到达的了（不可以是等于，因为等于的话，i还是可以到达的，可以继续运行算法）
+
+参考：https://leetcode.com/problems/jump-game/discuss/20907
+
+## [45 跳跃游戏 II](https://leetcode-cn.com/problems/jump-game-ii/)
+
+和力扣1024相同
+
+`lo, hi = hi, max(max_jumps[lo : hi + 1])`
+
+参考：力扣1024题
