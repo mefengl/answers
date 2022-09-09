@@ -877,3 +877,9 @@ nums[i - 2]是因为nums是从0开始的，i是从2开始的，相当于nums[0]�
 k > n / 2，可以认为k=+∞
 
 参考：https://labuladong.github.io/article/fname.html?fname=团灭股票问题
+
+## [187 重复的DNA序列](https://leetcode-cn.com/problems/repeated-dna-sequences/)
+
+*滑动窗口，配合 自定义哈希，因为数字可以简单的通过数学运算去除最高位和加入最低位
+
+参考：https://labuladong.github.io/article/fname.html?fname=rabinkarp
