@@ -812,3 +812,13 @@ nums[i - 2]是因为nums是从0开始的，i是从2开始的，相当于nums[0]�
 `return (root.val + left[1] + right[1], max(left) + max(right))`
 
 参考：https://leetcode.com/problems/house-robber-iii/discuss/376297
+
+## [121 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)
+
+`dp[i][k][0] = max(dp[i - 1][k][0], dp[i - 1][k][1] + prices[i])`
+
+`dp[i][k][1] = max(dp[i - 1][k][1], dp[i - 1][k - 1][0] - prices[i])`
+
+由题，k=1，dp[i - 1][k - 1][0] = dp[i - 1][0][0] = 0
+
+参考：https://labuladong.github.io/article/fname.html?fname=团灭股票问题
