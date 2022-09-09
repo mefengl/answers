@@ -903,3 +903,11 @@ k > n / 2，可以认为k=+∞
 下一个最早end = start于当前最早end后的最早end
 
 参考：https://labuladong.github.io/article/fname.html?fname=贪心算法之区间调度问题
+
+## [452 用最少数量的箭引爆气球](https://leetcode-cn.com/problems/minimum-number-of-arrows-to-burst-balloons/)
+
+*同力扣435题，不过边界不能重叠
+
+下一个最早end = start于当前最早end后的最早end
+
+参考：https://labuladong.github.io/article/fname.html?fname=贪心算法之区间调度问题
