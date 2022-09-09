@@ -845,3 +845,15 @@ nums[i - 2]是因为nums是从0开始的，i是从2开始的，相当于nums[0]�
 `dp[i][1] = max(dp[i - 1][1], dp[i - 2][0] - prices[i])`
 
 参考：https://labuladong.github.io/article/fname.html?fname=团灭股票问题
+
+## [714 买卖股票的最佳时机含手续费](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+
+可以在买时，或者是卖时，扣除手续费，这里选择在卖时扣除
+
+`dp[i][k][0] = max(dp[i - 1][k][0], dp[i - 1][k][1] + prices[i] - fee)`
+
+`dp[i][k][1] = max(dp[i - 1][k][1], dp[i - 1][k - 1][0] - prices[i])`
+
+同样，k=+∞，k不变，可以省略
+
+参考：https://labuladong.github.io/article/fname.html?fname=团灭股票问题
