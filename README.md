@@ -883,3 +883,11 @@ k > n / 2，可以认为k=+∞
 *滑动窗口，配合 自定义哈希，因为数字可以简单的通过数学运算去除最高位和加入最低位
 
 参考：https://labuladong.github.io/article/fname.html?fname=rabinkarp
+
+## [28 实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/)
+
+### Rabin-Karp 算法
+
+*同力扣187题，滑动窗口，配合 自定义哈希，因为数字可以简单的通过数学运算去除最高位和加入最低位，多加一步取模防止数字溢出，取模可能带来重复，所以匹配后还需字符串比较
+
+参考：https://labuladong.github.io/article/fname.html?fname=rabinkarp
