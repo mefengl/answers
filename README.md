@@ -979,3 +979,9 @@ intervals.sort(key=lambda x: (x[0], -x[1]))
 b若开始比a结束早，可以更新a的end，否则，将a加入结果集，更新a为b
 
 参考：https://leetcode.com/problems/merge-intervals/discuss/21227
+
+## [986 区间列表的交集](https://leetcode-cn.com/problems/interval-list-intersections/)
+
+*不是没有交集便是有交集，左边的最大值和右边的最小值是交集的左右边界，根据右边界决定哪个区间往后移动
+
+参考：https://labuladong.github.io/article/fname.html?fname=区间问题合集
