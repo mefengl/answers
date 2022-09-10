@@ -973,3 +973,9 @@ intervals.sort(key=lambda x: (x[0], -x[1]))
 排序后，后者只有end比cur_end大，才会被保留
 
 参考：https://leetcode.com/problems/remove-covered-intervals/discuss/878478
+
+## [56 合并区间](https://leetcode-cn.com/problems/merge-intervals/)
+
+b若开始比a结束早，可以更新a的end，否则，将a加入结果集，更新a为b
+
+参考：https://leetcode.com/problems/merge-intervals/discuss/21227
