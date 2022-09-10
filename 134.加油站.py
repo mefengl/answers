@@ -17,4 +17,5 @@ class Solution:
             delta[i] += delta[i - 1]
         return (delta.index(min(delta)) + 1) % n
 
+
 # @lc code=end
