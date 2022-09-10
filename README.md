@@ -947,3 +947,9 @@ k > n / 2，可以认为k=+∞
 `lo, hi = hi, max(max_jumps[lo : hi + 1])`
 
 参考：力扣1024题
+
+## [134 加油站](https://leetcode-cn.com/problems/gas-station/)
+
+*gas和cost构成每一站的变化，只要总和大于0，就一定有解，而且在唯一解的情况下，应该从油气理论的最低点开始
+
+参考：https://labuladong.github.io/article/fname.html?fname=老司机
