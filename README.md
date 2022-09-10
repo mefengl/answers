@@ -959,3 +959,9 @@ k > n / 2，可以认为k=+∞
 将每个数都放在第一个位置，然后递归求解剩下的数的全排列
 
 参考：https://leetcode.com/problems/permutations/discuss/18296
+
+## [51 N皇后](https://leetcode-cn.com/problems/n-queens/)
+
+行列值的加减结果能确定唯一的斜线
+
+参考：https://leetcode.com/problems/n-queens/discuss/19810
