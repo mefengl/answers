@@ -965,3 +965,11 @@ k > n / 2，可以认为k=+∞
 行列值的加减结果能确定唯一的斜线
 
 参考：https://leetcode.com/problems/n-queens/discuss/19810
+
+## [1288 删除被覆盖区间](https://leetcode-cn.com/problems/remove-covered-intervals/)
+
+intervals.sort(key=lambda x: (x[0], -x[1]))
+
+排序后，后者只有end比cur_end大，才会被保留
+
+参考：https://leetcode.com/problems/remove-covered-intervals/discuss/878478
