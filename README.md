@@ -953,3 +953,9 @@ k > n / 2，可以认为k=+∞
 *gas和cost构成每一站的变化，只要总和大于0，就一定有解，而且在唯一解的情况下，应该从油气理论的最低点开始
 
 参考：https://labuladong.github.io/article/fname.html?fname=老司机
+
+## [46 全排列](https://leetcode-cn.com/problems/permutations/)
+
+将每个数都放在第一个位置，然后递归求解剩下的数的全排列
+
+参考：https://leetcode.com/problems/permutations/discuss/18296
