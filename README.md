@@ -1025,3 +1025,9 @@ i+j+1是个位索引，i+j是十位索引
 *本题运算符开始有优先级，故遇到运算符时需要考虑运算优先级，要是运算优先级比当前符号低，终止运算
 
 参考：https://leetcode.cn/problems/basic-calculator-ii/solution/shi-yong-shuang-zhan-jie-jue-jiu-ji-biao-c65k/
+
+## [772 基本计算器 III](https://leetcode-cn.com/problems/basic-calculator-iii/)
+
+*同力扣227题，这题的测试用例有 -3//4 需要等于 0，而不是 -1,所以需要调整除法逻辑
+
+参考：https://leetcode-cn.com/problems/basic-calculator-iii/solution/shuang-zhan-jie-jue-tong-yong-biao-da-sh-3z9r/
