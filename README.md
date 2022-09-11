@@ -1063,3 +1063,11 @@ i+j+1是个位索引，i+j是十位索引
 *和力扣921题类似，不过这题的需要满足左括号前的右括号必须是双数
 
 参考：https://labuladong.github.io/article/fname.html?fname=括号插入
+
+## [391 完美矩形](https://leetcode-cn.com/problems/perfect-rectangle/)
+
+只有四个顶点出现奇数次，这四个顶点围成面积和总和面积相等
+
+> labuladong算法复杂在于用「最后四个顶点就应该构成完美矩形」这个特性来验证通过遍历得出的四个顶点，而不是直接验证总面积
+
+参考：https://leetcode.com/problems/perfect-rectangle/discuss/1229993
