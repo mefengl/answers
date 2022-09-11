@@ -1043,3 +1043,11 @@ i+j+1是个位索引，i+j是十位索引
 `res = max(res, min(l_max, r_max) * (r - l))`
 
 参考：https://labuladong.github.io/article/fname.html?fname=接雨水
+
+## [20 有效的括号](https://leetcode-cn.com/problems/valid-parentheses/)
+
+左括号入栈，右括号匹配则出站，否则返回false，最后检查栈是否为空
+
+> 左右各括号计数是不行的，因为括号有左右之分，比如][，计数就分辨不出
+
+参考：https://labuladong.github.io/article/fname.html?fname=括号插入
