@@ -1031,3 +1031,9 @@ i+j+1是个位索引，i+j是十位索引
 *同力扣227题，这题的测试用例有 -3//4 需要等于 0，而不是 -1,所以需要调整除法逻辑
 
 参考：https://leetcode.cn/problems/basic-calculator-ii/solution/shi-yong-shuang-zhan-jie-jue-jiu-ji-biao-c65k/
+
+## [42 接雨水](https://leetcode-cn.com/problems/trapping-rain-water/)
+
+`res += min(l_max[i], r_max[i]) - height[i]`
+
+参考：https://labuladong.github.io/article/fname.html?fname=接雨水
