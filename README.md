@@ -1037,3 +1037,9 @@ i+j+1是个位索引，i+j是十位索引
 `res += min(l_max[i], r_max[i]) - height[i]`
 
 参考：https://labuladong.github.io/article/fname.html?fname=接雨水
+
+## [11 盛最多水的容器](https://leetcode-cn.com/problems/container-with-most-water/)
+
+`res = max(res, min(l_max, r_max) * (r - l))`
+
+参考：https://labuladong.github.io/article/fname.html?fname=接雨水
