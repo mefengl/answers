@@ -1019,3 +1019,9 @@ i+j+1是个位索引，i+j是十位索引
 空格和单元运算，可以通过替换字符串的方式，统一处理
 
 参考：https://leetcode.cn/problems/basic-calculator/solution/shuang-zhan-jie-jue-tong-yong-biao-da-sh-olym/
+
+## [227 基本计算器 II](https://leetcode-cn.com/problems/basic-calculator-ii/)
+
+*本题运算符开始有优先级，故遇到运算符时需要考虑运算优先级，要是运算优先级比当前符号低，终止运算
+
+参考：https://leetcode.cn/problems/basic-calculator-ii/solution/shi-yong-shuang-zhan-jie-jue-jiu-ji-biao-c65k/
