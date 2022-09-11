@@ -1051,3 +1051,9 @@ i+j+1是个位索引，i+j是十位索引
 > 左右各括号计数是不行的，因为括号有左右之分，比如][，计数就分辨不出
 
 参考：https://labuladong.github.io/article/fname.html?fname=括号插入
+
+## [921 使括号有效的最少添加](https://leetcode-cn.com/problems/minimum-add-to-make-parentheses-valid/)
+
+*遍历的过程中，有两种情况，左括号多了和右括号多了，可以以其中一项括号为基准，当它<0时，代表另一种括号多了，记录并回正（回正的意义在于不让二者的多余相抵），最后将两者相加即可
+
+参考：https://labuladong.github.io/article/fname.html?fname=括号插入
