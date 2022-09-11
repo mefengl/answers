@@ -1007,3 +1007,15 @@ i+j+1是个位索引，i+j是十位索引
 每次将乘积加上个位索引的值，个位更新个位索引值，进位更新十位索引值
 
 参考：https://labuladong.github.io/article/fname.html?fname=字符串乘法
+
+## [224 基本计算器](https://leetcode-cn.com/problems/basic-calculator/)
+
+左括号直接入栈
+
+右括号，在弹出左括号前，清空运算
+
+其它符号，清空运算，再入栈
+
+空格和单元运算，可以通过替换字符串的方式，统一处理
+
+参考：https://leetcode.cn/problems/basic-calculator/solution/shuang-zhan-jie-jue-tong-yong-biao-da-sh-olym/
