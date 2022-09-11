@@ -985,3 +985,11 @@ b若开始比a结束早，可以更新a的end，否则，将a加入结果集，�
 *不是没有交集便是有交集，左边的最大值和右边的最小值是交集的左右边界，根据右边界决定哪个区间往后移动
 
 参考：https://labuladong.github.io/article/fname.html?fname=区间问题合集
+
+## [659 分割数组为连续子序列](https://leetcode-cn.com/problems/split-array-into-consecutive-subsequences/)
+
+存在num-1的前缀，那么num就可以接在前缀后面
+
+不存在，如果num+1和num+2存在，那么就可以新建一个子序列，否则，返回false
+
+参考：https://labuladong.github.io/article/fname.html?fname=斗地主
