@@ -999,3 +999,11 @@ b若开始比a结束早，可以更新a的end，否则，将a加入结果集，�
 将最大的数放在顶上，然后翻转全部，这样就把最大的数放到了最后
 
 参考：https://labuladong.github.io/article/fname.html?fname=烧饼排序
+
+## [43 字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)
+
+i+j+1是个位索引，i+j是十位索引
+
+每次将乘积加上个位索引的值，个位更新个位索引值，进位更新十位索引值
+
+参考：https://labuladong.github.io/article/fname.html?fname=字符串乘法
