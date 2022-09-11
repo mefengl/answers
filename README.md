@@ -993,3 +993,9 @@ b若开始比a结束早，可以更新a的end，否则，将a加入结果集，�
 不存在，如果num+1和num+2存在，那么就可以新建一个子序列，否则，返回false
 
 参考：https://labuladong.github.io/article/fname.html?fname=斗地主
+
+## [969 煎饼排序](https://leetcode-cn.com/problems/pancake-sorting/)
+
+将最大的数放在顶上，然后翻转全部，这样就把最大的数放到了最后
+
+参考：https://labuladong.github.io/article/fname.html?fname=烧饼排序
