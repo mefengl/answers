@@ -1057,3 +1057,9 @@ i+j+1是个位索引，i+j是十位索引
 *遍历的过程中，有两种情况，左括号多了和右括号多了，可以以其中一项括号为基准，当它<0时，代表另一种括号多了，记录并回正（回正的意义在于不让二者的多余相抵），最后将两者相加即可
 
 参考：https://labuladong.github.io/article/fname.html?fname=括号插入
+
+## [1541 平衡括号字符串的最少插入次数](https://leetcode-cn.com/problems/minimum-insertions-to-balance-a-parentheses-string/)
+
+*和力扣921题类似，不过这题的需要满足左括号前的右括号必须是双数
+
+参考：https://labuladong.github.io/article/fname.html?fname=括号插入
