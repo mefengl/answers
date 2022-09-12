@@ -1077,3 +1077,9 @@ i+j+1是个位索引，i+j是十位索引
 *坐和离开时维护连续空位们，坐时找到最长的连续空位，然后插入
 
 参考：https://labuladong.github.io/article/fname.html?fname=座位调度
+
+## [392 判断子序列](https://leetcode-cn.com/problems/is-subsequence/)
+
+双指针
+
+参考：https://labuladong.github.io/article/fname.html?fname=二分查找判定子序列
