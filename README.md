@@ -1071,3 +1071,9 @@ i+j+1是个位索引，i+j是十位索引
 > labuladong算法复杂在于用「最后四个顶点就应该构成完美矩形」这个特性来验证通过遍历得出的四个顶点，而不是直接验证总面积
 
 参考：https://leetcode.com/problems/perfect-rectangle/discuss/1229993
+
+## [855 考场就座](https://leetcode-cn.com/problems/exam-room/)
+
+*坐和离开时维护连续空位们，坐时找到最长的连续空位，然后插入
+
+参考：https://labuladong.github.io/article/fname.html?fname=座位调度
