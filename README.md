@@ -24,14 +24,6 @@ k 个元素的组合是子集树的 k 层节点
 
 参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
 
-## [90 子集 II](https://leetcode.cn/problems/subsets-ii/)
-
-值相同的相邻树枝会产生重复
-
-> 排序，num[i-1] != num[i]
-
-参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
-
 ## [47 排列 II](https://leetcode.cn/problems/permutations-ii/)
 
 左相邻元素没有用过就跳过
@@ -1130,3 +1122,11 @@ for i,num in enumerate(nums):
 ```
 
 参考：https://leetcode.com/problems/permutations/discuss/18296
+
+## [90 子集 II](https://leetcode.cn/problems/subsets-ii/)
+
+值相同的相邻树枝会产生重复
+
+排序，然后`i != start and num[i-1] != num[i]`，即同一树枝的相邻元素不重复
+
+参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
