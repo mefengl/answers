@@ -1095,3 +1095,17 @@ i+j+1是个位索引，i+j是十位索引
 *剪枝
 
 参考：https://leetcode.com/problems/partition-to-k-equal-sum-subsets/discuss/274942
+
+## [78 子集](https://leetcode-cn.com/problems/subsets/)
+
+### 二叉树遍历
+
+所有元素，选与不选
+
+参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
+
+### 数学特性
+
+`res += [x + [num] for x in res]`
+
+参考：https://leetcode.com/problems/subsets/discuss/27301
