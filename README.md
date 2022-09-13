@@ -1130,3 +1130,9 @@ for i,num in enumerate(nums):
 排序，然后`i != start and num[i-1] != num[i]`，即同一树枝的相邻元素不重复
 
 参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
+
+## [40 组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)
+
+同力扣90题，但是只要`sum(path) == target`的节点
+
+参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
