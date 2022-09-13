@@ -24,14 +24,6 @@ k 个元素的组合是子集树的 k 层节点
 
 参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
 
-## [47 排列 II](https://leetcode.cn/problems/permutations-ii/)
-
-左相邻元素没有用过就跳过
-
-> 相同元素相对位置固定，2 -> 2' -> 2''
-
-参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
-
 ## [21 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/)
 
 把较小的节点接到结果链表上
@@ -1134,5 +1126,11 @@ for i,num in enumerate(nums):
 ## [40 组合总和 II](https://leetcode-cn.com/problems/combination-sum-ii/)
 
 同力扣90题，但是只要`sum(path) == target`的节点
+
+参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
+
+## [47 全排列 II](https://leetcode-cn.com/problems/permutations-ii/)
+
+同力扣90题，但是只要`len(path) == len(nums)`的节点，即叶子节点
 
 参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
