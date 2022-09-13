@@ -954,12 +954,6 @@ k > n / 2，可以认为k=+∞
 
 参考：https://labuladong.github.io/article/fname.html?fname=老司机
 
-## [46 全排列](https://leetcode-cn.com/problems/permutations/)
-
-将每个数都放在第一个位置，然后递归求解剩下的数的全排列
-
-参考：https://leetcode.com/problems/permutations/discuss/18296
-
 ## [51 N皇后](https://leetcode-cn.com/problems/n-queens/)
 
 行列值的加减结果能确定唯一的斜线
@@ -1117,3 +1111,22 @@ i+j+1是个位索引，i+j是十位索引
 求子集，不过是求长度为k的子集
 
 参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
+
+## [46 全排列](https://leetcode-cn.com/problems/permutations/)
+
+### 回溯法
+
+每个位置放每个元素
+
+参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
+
+### 利用切片语法
+
+将每个数都放在第一个位置，然后递归求解剩下的数的全排列
+
+```python
+for i,num in enumerate(nums):
+    backtrack(nums[:i]+nums[i+1:],path+[num],res)
+```
+
+参考：https://leetcode.com/problems/permutations/discuss/18296
