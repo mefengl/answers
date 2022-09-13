@@ -1143,6 +1143,8 @@ for i,num in enumerate(nums):
 
 ## [200 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
 
+dfs函数的作用与其说是遍历，不如说是淹没
+
 遍历每个点，如果是1，就dfs，将所有相连的1都置为0（沉没该岛）
 
 参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
