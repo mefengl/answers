@@ -1109,3 +1109,11 @@ i+j+1是个位索引，i+j是十位索引
 `res += [x + [num] for x in res]`
 
 参考：https://leetcode.com/problems/subsets/discuss/27301
+
+## [77 组合](https://leetcode-cn.com/problems/combinations/)
+
+同力扣78题，
+
+求子集，不过是求长度为k的子集
+
+参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
