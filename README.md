@@ -1152,3 +1152,9 @@ for i,num in enumerate(nums):
 同力扣200题，但是要先将四周的陆地全部淹没
 
 参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
+
+## [1020 飞地的数量](https://leetcode-cn.com/problems/number-of-enclaves/)
+
+同力扣1254题，将四周的陆地全部淹没后，直接统计剩下的陆地数即可
+
+参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
