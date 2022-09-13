@@ -1158,3 +1158,17 @@ for i,num in enumerate(nums):
 同力扣1254题，将四周的陆地全部淹没后，直接统计剩下的陆地数即可
 
 参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
+
+## [695 岛屿的最大面积](https://leetcode-cn.com/problems/max-area-of-island/)
+
+```python
+return (
+    1
+    + dfs(grid, i - 1, j)
+    + dfs(grid, i + 1, j)
+    + dfs(grid, i, j - 1)
+    + dfs(grid, i, j + 1)
+)
+```
+
+参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
