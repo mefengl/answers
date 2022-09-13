@@ -1083,3 +1083,9 @@ i+j+1是个位索引，i+j是十位索引
 双指针
 
 参考：https://labuladong.github.io/article/fname.html?fname=二分查找判定子序列
+
+## [792 匹配子序列的单词数](https://leetcode-cn.com/problems/number-of-matching-subsequences/)
+
+*char->char_indexs，然后遍历每个词的每个字母，二分查找
+
+参考：https://labuladong.github.io/article/fname.html?fname=二分查找判定子序列
