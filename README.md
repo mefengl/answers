@@ -1140,3 +1140,9 @@ for i,num in enumerate(nums):
 同力扣40题，但是`next_start = i`，而不是i+1，即可以重复
 
 参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
+
+## [200 岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)
+
+遍历每个点，如果是1，就dfs，将所有相连的1都置为0（沉没该岛）
+
+参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
