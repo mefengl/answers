@@ -1134,3 +1134,9 @@ for i,num in enumerate(nums):
 同力扣90题，但是只要`len(path) == len(nums)`的节点，即叶子节点
 
 参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
+
+## [39 组合总和](https://leetcode-cn.com/problems/combination-sum/)
+
+同力扣40题，但是`next_start = i`，而不是i+1，即可以重复
+
+参考：https://labuladong.github.io/article/fname.html?fname=子集排列组合
