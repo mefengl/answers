@@ -1146,3 +1146,9 @@ for i,num in enumerate(nums):
 遍历每个点，如果是1，就dfs，将所有相连的1都置为0（沉没该岛）
 
 参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
+
+## [1254 统计封闭岛屿的数目](https://leetcode-cn.com/problems/number-of-closed-islands/)
+
+同力扣200题，但是要先将四周的陆地全部淹没
+
+参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
