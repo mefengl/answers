@@ -1174,3 +1174,9 @@ return (
 ```
 
 参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
+
+## [1905 统计子岛屿](https://leetcode-cn.com/problems/count-sub-islands/)
+
+类似1254题，但不淹没陆地，淹没非子岛屿的岛屿（`grid1[i][j] == 0 and grid2[i][j] == 1`）
+
+参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
