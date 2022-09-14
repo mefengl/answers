@@ -1201,3 +1201,7 @@ path.append(-dir)
 *类似n皇后问题，行列块都要判断有无重复
 
 参考：https://labuladong.github.io/article/fname.html?fname=sudoku
+
+## [22 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
+
+回溯法，`left < 0 or right < 0`时剪枝，保证不会多出左括号或右括号；`left > right`时剪枝，保证左括号数不会多于右括号数，`left == right == 0`时结束
