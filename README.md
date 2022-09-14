@@ -1215,3 +1215,9 @@ path.append(-dir)
 记录每层的节点数，遍历每层，当遇到第一个叶子节点时，返回当前层数
 
 参考：https://labuladong.github.io/article/fname.html?fname=BFS框架
+
+## [752 打开转盘锁](https://leetcode-cn.com/problems/open-the-lock/)
+
+*BFS，转动每位，分上下两种情况
+
+参考：https://labuladong.github.io/article/fname.html?fname=BFS框架
