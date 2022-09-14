@@ -1221,3 +1221,9 @@ path.append(-dir)
 *BFS，转动每位，分上下两种情况
 
 参考：https://labuladong.github.io/article/fname.html?fname=BFS框架
+
+## [773 滑动谜题](https://leetcode-cn.com/problems/sliding-puzzle/)
+
+BFS，将二维数组转换为一维数组，记录每个一维索引在二维数组中的相邻一维索引，每次得到"0"的索引，将"0"与相邻索引的值交换，得到新的一维数组，判断是否到达，剪枝，继续遍历
+
+参考：https://labuladong.github.io/article/fname.html?fname=BFS解决滑动拼图
