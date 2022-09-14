@@ -1205,3 +1205,5 @@ path.append(-dir)
 ## [22 括号生成](https://leetcode-cn.com/problems/generate-parentheses/)
 
 回溯法，`left < 0 or right < 0`时剪枝，保证不会多出左括号或右括号；`left > right`时剪枝，保证左括号数不会多于右括号数，`left == right == 0`时结束
+
+参考：https://labuladong.github.io/article/fname.html?fname=合法括号生成
