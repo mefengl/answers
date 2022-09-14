@@ -1195,3 +1195,9 @@ path.append(-dir)
 ```
 
 参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
+
+## [37 解数独](https://leetcode-cn.com/problems/sudoku-solver/)
+
+*类似n皇后问题，行列块都要判断有无重复
+
+参考：https://labuladong.github.io/article/fname.html?fname=sudoku
