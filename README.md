@@ -1180,3 +1180,18 @@ return (
 类似1254题，但不淹没陆地，淹没非子岛屿的岛屿（`grid1[i][j] == 0 and grid2[i][j] == 1`）
 
 参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
+
+## [694 不同岛屿的数量](https://leetcode-cn.com/problems/number-of-distinct-islands/)
+
+记录出入路径
+
+```python
+path.append(dir)
+dfs(grid, i - 1, j, 1, path)
+dfs(grid, i + 1, j, 2, path)
+dfs(grid, i, j - 1, 3, path)
+dfs(grid, i, j + 1, 4, path)
+path.append(-dir)
+```
+
+参考：https://labuladong.github.io/article/fname.html?fname=岛屿题目
