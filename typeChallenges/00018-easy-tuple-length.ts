@@ -15,8 +15,9 @@ type cases = [
 
 
 // ============= Your Code Here =============
+// type Length<T> = T['length']
 // can't deal with the not array cases, but simple enough
 // simple is more important than correct
 // simple is another way of correct
-// type Length<T> = T['length']
+// full version
 type Length<T extends readonly any[]> = T['length']
