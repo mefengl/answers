@@ -2,8 +2,8 @@
 
 ## leetcode
 
-https://github.com/mefengl/leetcode/blob/main/python/README.md
+https://github.com/mefengl/leetcode/blob/main/python
 
 ## typechanllenges
 
-https://github.com/mefengl/leetcode/blob/main/typeChallenges/README.md
+https://github.com/mefengl/leetcode/blob/main/typeChallenges
