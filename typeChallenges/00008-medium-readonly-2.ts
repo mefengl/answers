@@ -1,33 +1,32 @@
 // ============= Test Cases =============
-import type { Alike, Expect } from './test-utils'
+import type { Alike, Expect } from "./test-utils";
 
 type cases = [
   Expect<Alike<MyReadonly2<Todo1>, Readonly<Todo1>>>,
-  Expect<Alike<MyReadonly2<Todo1, 'title' | 'description'>, Expected>>,
-  Expect<Alike<MyReadonly2<Todo2, 'title' | 'description'>, Expected>>,
-]
+  Expect<Alike<MyReadonly2<Todo1, "title" | "description">, Expected>>,
+  Expect<Alike<MyReadonly2<Todo2, "title" | "description">, Expected>>
+];
 
 // @ts-expect-error
-type error = MyReadonly2<Todo1, 'title' | 'invalid'>
+type error = MyReadonly2<Todo1, "title" | "invalid">;
 
 interface Todo1 {
-  title: string
-  description?: string
-  completed: boolean
+  title: string;
+  description?: string;
+  completed: boolean;
 }
 
 interface Todo2 {
-  readonly title: string
-  description?: string
-  completed: boolean
+  readonly title: string;
+  description?: string;
+  completed: boolean;
 }
 
 interface Expected {
-  readonly title: string
-  readonly description?: string
-  completed: boolean
+  readonly title: string;
+  readonly description?: string;
+  completed: boolean;
 }
-
 
 // ============= Your Code Here =============
 // like in JS, K = keyof T means when no K is given, K = keyof T
@@ -45,4 +44,4 @@ type MyOmit<T, K> = {
   [P in keyof T as P extends K ? never : P]: T[P];
 };
 // here can't use MyReadonly<K>, because K is just a key list
-type MyReadonly2<T, K extends keyof T = keyof T> = MyReadonly<T> & MyOmit<T,K>
+type MyReadonly2<T, K extends keyof T = keyof T> = MyReadonly<T> & MyOmit<T, K>;
