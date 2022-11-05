@@ -13,13 +13,11 @@ type cases = [
 
 
 // ============= Your Code Here =============
-// declare function PromiseAll<T>(values: T): Promise<T>;
-
-// declare function PromiseAll<T extends unknown[]>(
-//   values: readonly [...T]
-// ): Promise<T extends Promise<infer R> ? R : T>;
-
+// first key point is [...T]
+// then is [K in keyof T]: T[K] to traverse value
+// then is Promise<infer R>
 declare function PromiseAll<T extends unknown[]>(
-  value: readonly [...T]
-//ZZTODO: how does keyof work?
-): Promise<{ [P in keyof T]: T[P] extends Promise<infer R> ? R : T[P] }>;
+  values: readonly [...T]
+): Promise<{
+  [K in keyof T]: T[K] extends Promise<infer R> ? R : T[K];
+}>;
