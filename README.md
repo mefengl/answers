@@ -1,6 +1,6 @@
-# Answers
+# Answer
 
-If question is "I", what's the answers?
+If question is "I", what's the answer?
 
 ## leetcode
 
