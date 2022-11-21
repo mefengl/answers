@@ -18,14 +18,20 @@ type cases = [
 // base case
 type Flatten1<T> = T extends [] ? [] : T;
 
-type Flatten<T> = T extends []
+type Flatten2<T> = T extends []
   ? []
   : T extends [infer H, ...infer R]
   ? // if is an array
-    // R is exactly the T cut the head off
-    // so Flatten<R> just another Flatten<T>
-    // Flatten<H> => [H] / []
-    // ... really do the jobs, like [H] => H
-    [...Flatten<H>, ...Flatten<R>]
+  // R is exactly the T cut the head off
+  // so Flatten<R> just another Flatten<T>
+  // Flatten<H> => [H] / []
+  // ... really do the jobs, like [H] => H
+  [...Flatten2<H>, ...Flatten2<R>]
   : // if is value
-    [T];
+  [T];
+
+// want deal with array and nonarray at the same time, that why above is so complex
+type Flatten<T extends unknown[]> = T extends [infer H, ...infer R] ?
+  H extends unknown[] ?
+  [...Flatten<H>, ...Flatten<R>] : [H, ...Flatten<R>]
+  : T
