@@ -4,17 +4,29 @@ below is the languages that I can write like a master
 
 > ps: `hello world` only
 
+C
+
+It's so difficult that I don't know
+
+C++
+
+same as C
+
 Python
 
 ```python
 print("hello world")
 ```
 
-TypeScript
+JavaScript
 
-```typescript
+```javascript
 console.log("hello world")
 ```
+
+Java
+
+same as C++
 
 Ruby
 
@@ -28,14 +40,12 @@ Lisp
 (print :helloworld)
 ```
 
-C
+TypeScript
 
-It's so difficult that I don't know
+same as JavaScript
 
-C++
+Lua
 
-same as C
-
-Java
-
-same as C++
+```lua
+print('hello world')
+```
