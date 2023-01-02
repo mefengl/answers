@@ -1,9 +1,19 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import { v1 as uuid } from 'uuid';
-import PocketBase from 'pocketbase';
+import mongoose from 'mongoose';
+import Person from './models/person.js';
+import env from './env.json' assert { type: 'json' };
+const MONGODB_URI = `mongodb+srv://dbUser:${env.pw}@cluster0.84pbcs2.mongodb.net/?retryWrites=true&w=majority`
+console.log('connecting to', MONGODB_URI)
 
-const pb = new PocketBase('http://localhost:8090');
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log('connected to MongoDB')
+  })
+  .catch((error) => {
+    console.log('error connecting to MongoDB:', error.message)
+  })
 
 const typeDefs = `#graphql
 enum YesNo {
@@ -45,39 +55,22 @@ type Address {
 
 const resolvers = {
   Query: {
-    personCount: async () => {
-      const count = await pb.collection('persons').getFullList().then((res) => {
-        return res.length;
-      });
-      return count;
+    personCount: async () => Person.collection.countDocuments(),
+    allPersons: async (root, args) => {
+      return Person.find({})
     },
-    allPersons: (root, args) => {
-      if (!args.phone) {
-        return persons
-      }
-      const byPhone = (person) =>
-        args.phone === 'YES' ? person.phone : !person.phone
-      return persons.filter(byPhone)
-    },
-    findPerson: (root, args) =>
-      persons.find(p => p.name === args.name)
+    findPerson: async (root, args) =>
+      Person.findOne({ name: args.name })
   },
   Mutation: {
-    addPerson: (root, args) => {
-      const person = { ...args, id: uuid() }
-      persons = persons.concat(person)
-      return person
+    addPerson: async (root, args) => {
+      const person = new Person({ ...args })
+      return person.save()
     },
-    editNumber: (root, args) => {
-      const person = persons.find(p => p.name === args.name)
-      if (!person) {
-        return null
-      }
-
-      const updatedPerson = { ...person, phone: args.phone }
-
-      persons = persons.map(p => p.name === args.name ? updatedPerson : p)
-      return updatedPerson
+    editNumber: async (root, args) => {
+      const person = await Person.findOne({ name: args.name })
+      person.phone = args.phone
+      return person.save()
     }
   },
   Person: {
