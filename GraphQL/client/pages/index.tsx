@@ -2,14 +2,13 @@ import { gql, useQuery } from "@apollo/client"
 
 const ALL_PERSONS = gql`
   query {
-    allPersons {
-      name
-    }
+    personCount
   }
 `
 
 export default function Home() {
   const result = useQuery(ALL_PERSONS)
+  console.log(result)
 
   if (result.loading) {
     return <div>loading...</div>
@@ -17,7 +16,7 @@ export default function Home() {
 
   return (
     <div>
-      {result.data.allPersons.map((p: any) => p.name).join(", ")}
+    hello
     </div>
   )
 }

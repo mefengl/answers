@@ -1,30 +1,9 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 import { v1 as uuid } from 'uuid';
+import PocketBase from 'pocketbase';
 
-
-let persons = [
-  {
-    name: "Arto Hellas",
-    phone: "040-123543",
-    street: "Tapiolankatu 5 A",
-    city: "Espoo",
-    id: "3d594650-3436-11e9-bc57-8b80ba54c431"
-  },
-  {
-    name: "Matti Luukkainen",
-    phone: "040-432342",
-    street: "Malminkaari 10 A",
-    city: "Helsinki",
-    id: '3d599470-3436-11e9-bc57-8b80ba54c431'
-  },
-  {
-    name: "Venla Ruuska",
-    street: "Nallemäentie 22 C",
-    city: "Helsinki",
-    id: '3d599471-3436-11e9-bc57-8b80ba54c431'
-  },
-]
+const pb = new PocketBase('http://localhost:8090');
 
 const typeDefs = `#graphql
 enum YesNo {
@@ -66,7 +45,12 @@ type Address {
 
 const resolvers = {
   Query: {
-    personCount: () => persons.length,
+    personCount: async () => {
+      const count = await pb.collection('persons').getFullList().then((res) => {
+        return res.length;
+      });
+      return count;
+    },
     allPersons: (root, args) => {
       if (!args.phone) {
         return persons
