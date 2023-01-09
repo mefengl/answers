@@ -1,33 +1,34 @@
-1
+## Easy
+1 what is writing to this log file?
 kill -9 $(lsof | grep bad.log | awk '{print $2}')
-2
+2 countng IPs
 cat /home/admin/access.log | awk '{print $1}' | sort | uniq -c | sort | tail -1 | awk '{print $2}' > /home/admin/highestip.txt
-3
+3 Find the secret combination
 
+## Medium
+4 can't write data into database
 
-4
+5 can't serve web file
 
-5
+6 Borked Nginx
 
-6
+7 Docker container won't start
 
-7
+8 Am I in a container?
 
-8
+9 Close an Open File
 
-9
+10 WSGI with Gunicorn
 
-10
+11 etcd SSL cert troubles
 
-11
+## Hard
+12 it's always DNS.
 
+13 Docker web container can't connect to db container.
 
-12
+14  WTFIT - What The Fun Is This?
 
-13
+15 Docker and Kubernetes web app not working.
 
-14
-
-15
-
-16
+16 can't write data into database.
