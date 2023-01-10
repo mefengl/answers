@@ -10,7 +10,8 @@ cat /home/admin/access.log | awk '{print $1}' | sort | uniq -c | sort | tail -1 
 3 Find the secret combination
 ```bash
 echo -n $(cat /home/admin/*.txt | grep -c Alice) > /home/admin/solution;
-echo $() >> /home/admin/solution
+
+for file in /home/admin/*.txt; do if [[ $(grep -c Alice $file) -eq 1 ]]; then cat $file | tr -d '\n' | awk -F Alice '{print $2}' | awk '{print $2}' >> /home/admin/solution; fi ; done
 ```
 
 ## Medium
