@@ -1,9 +1,17 @@
 ## Easy
 1 what is writing to this log file?
+```bash
 kill -9 $(lsof | grep bad.log | awk '{print $2}')
+```
 2 countng IPs
+```bash
 cat /home/admin/access.log | awk '{print $1}' | sort | uniq -c | sort | tail -1 | awk '{print $2}' > /home/admin/highestip.txt
+```
 3 Find the secret combination
+```bash
+echo -n $(cat /home/admin/*.txt | grep -c Alice) > /home/admin/solution;
+echo $() >> /home/admin/solution
+```
 
 ## Medium
 4 can't write data into database
