@@ -19,9 +19,26 @@
  * }
  */
 
+// Recursive
 function invertTree(root: TreeNode | null): TreeNode | null {
   if (!root) return null;
   [root.left, root.right] = [invertTree(root.right), invertTree(root.left)]
   return root
 };
+
+// Interation
+// function invertTree(root: TreeNode | null): TreeNode | null {
+//   if (!root) return null;
+//   const stack = [root]
+//   while (stack.length) {
+//     const node = stack.pop()
+//     if (node) {
+//       [node.left, node.right] = [node.right, node.left]
+//       node.left && stack.push(node.left)
+//       node.right && stack.push(node.right)
+//     }
+//   }
+//   return root
+// };
+
 // @lc code=end
